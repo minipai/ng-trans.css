@@ -1,4 +1,4 @@
-@charset "utf-8";/* transition duration */
+/* transition duration */
 .ng-trans > .ng-enter, .ng-trans > .ng-leave {
   -webkit-transition: 600ms all;
   transition: 600ms all;
@@ -123,17 +123,15 @@
 /*
 
 */
-
-
-
-
 body {
-  background: #FDF6E3;
-  font-family: sans-serif; }
+  background: #FEF9CD;
+  font-family: sans-serif;
+}
 
 b {
   color: #c00;
 }
+
 pre {
   color: #666;
 }
@@ -141,4 +139,50 @@ pre {
 .css-code {
   height: 30em;
   overflow: auto;
+}
+
+#main {
+  background: #FEF9CD;
+  color: #7b5704;
+}
+
+#header {
+  background-color: #C0C314;
+  padding: 0 0 10px;
+  border-bottom: 6px solid #FBD783;
+  margin-bottom: 10px;
+}
+#header h1 {
+  color: #ffffff;
+}
+#header h1 small {
+  color: #92950f;
+}
+#header .download-button {
+  margin-top: 13px;
+}
+
+#footer {
+  background-color: #FBD783;
+  color: #ac7a06;
+  padding: 1em 0 0.5em;
+  margin: 1em 0 0;
+}
+#footer a {
+  color: #900;
+}
+
+.btn-primary {
+  background: #a9ac12;
+  border: 1px solid #a0a311;
+}
+.btn-primary:hover {
+  background-color: #92950f;
+  border: 1px solid #898b0e;
+}
+
+h4 {
+  color: #898b0e;
+  border-left: 12px solid #9c9e10;
+  padding: 0 0 0 10px;
 }
