@@ -58,8 +58,14 @@
       </ul>
      </div>
     <div class="col-md-9">
-      <h4>HTML</h4>
-      <p ng-non-bindable>You only need to add class <b>ng-trans ng-trans-{{transType}}</b> to your parent element of ng-repeat to make transition work.</p>
+      <h4>Install</h4>
+      <p>Use <a href="http://bower.io">bower</a> to install: <code>bower install ng-trans-css</code>, or <a href="ng-trans.css">download</a>.</p>
+      <br>
+      <h4>Usage</h4>
+      <ol>
+        <li>Link your webpage to ng-trans.css</li>
+        <li ng-non-bindable>Add class <b>ng-trans ng-trans-{{transType}}</b> to your parent element of ng-repeat to make transition work.</li>
+      </ol>
       <pre>
         <code>
 &lt;ul class=&quot;list-group ng-trans ng-trans-<b>{{transType}}</b>&quot;&gt;
@@ -69,7 +75,6 @@
       </pre>
       <br>
       <h4>CSS</h4>
-       <p>Copy styles below to your stylesheet, or <a href="ng-trans.css">download</a>.</p>
       <pre class="css-code">
         <code ng-include src=" 'stylesheets/ng-trans.css' "></code>
 
