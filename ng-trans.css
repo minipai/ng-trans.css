@@ -160,6 +160,47 @@
   top: -800px;
 }
 
+/* Scale transition */
+.ng-trans-scale-up > .ng-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.64);
+  -ms-transform: scale(0.64);
+  transform: scale(0.64);
+}
+.ng-trans-scale-up > .ng-enter.ng-enter-active,
+.ng-trans-scale-up .ng-leave {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.ng-trans-scale-up > .ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: scale(0.64);
+  -ms-transform: scale(0.64);
+  transform: scale(0.64);
+}
+
+.ng-trans-scale-down > .ng-enter {
+  opacity: 0;
+  -webkit-transform: scale(1.68);
+  -ms-transform: scale(1.68);
+  transform: scale(1.68);
+}
+.ng-trans-scale-down > .ng-enter.ng-enter-active,
+.ng-trans-scale-down .ng-leave {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.ng-trans-scale-down > .ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: scale(1.68);
+  -ms-transform: scale(1.68);
+  transform: scale(1.68);
+}
+
 /* Flip transition */
 .ng-trans-flip-x > .ng-enter {
   opacity: 0;
