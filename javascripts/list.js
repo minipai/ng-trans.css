@@ -13,7 +13,7 @@
     };
     $scope.transClass = function() {
       if ($scope.transType) {
-        return "ng-trans ng-trans-" + $scope.transType;
+        return "ng-trans ng-trans-" + $scope.transType + " " + $scope.timingFunction;
       }
     };
     return $scope.data = mockList = ['lorem ipsum dolor sit', 'amet consectetur', 'adipisicing elit'];

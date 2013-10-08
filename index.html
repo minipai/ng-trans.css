@@ -50,6 +50,15 @@
         <option value="rotate">rotate</option>
       </select>
       </p>
+      <p>Select a timing function.</p>
+      <select name="" id="" class="form-control" ng-model="timingFunction">
+        <option value="">Default</option>
+        <option value="easeOutBack">easeOutBack</option>
+        <option value="easeOutCirc">easeOutCirc</option>
+        <option value="easeOutExpo">easeOutExpo</option>
+        <option value="easeOutQuart">easeOutQuart</option>
+      </select>
+      </p>
      <p class="text-center">
         <button class="btn btn-danger" ng-click="reset()">Reset</button>
         <button class="btn btn-primary" ng-click="more()">Add</button>
@@ -67,10 +76,11 @@
       <ol>
         <li>Link your webpage to ng-trans.css</li>
         <li ng-non-bindable>Add class <b>ng-trans ng-trans-{{transType}}</b> to your parent element of ng-repeat to make transition work.</li>
+        <li>In addition, you can add class {{transType}}. (easeOutBack will bounce!)</li>
       </ol>
       <pre>
         <code>
-&lt;ul class=&quot;list-group ng-trans ng-trans-<b>{{transType}}</b>&quot;&gt;
+&lt;ul class=&quot;list-group ng-trans ng-trans-<b>{{transType}}</b> <b>{{timingFunction}}</b>&quot;&gt;
   &lt;li class=&quot;list-group-item&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
 &lt;/ul&gt;
         </code>

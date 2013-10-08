@@ -1,7 +1,13 @@
 /* transition duration */
 .ng-trans > .ng-enter, .ng-trans > .ng-leave {
-  -webkit-transition: 600ms all;
-  transition: 600ms all;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+}
+
+.bouncy > .ng-enter, .bouncy > .ng-leave {
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* COOOOOL CSS EASING ANIMATION TOOL "Ceaser" [http://matthewlein.com/ceaser/] */
 }
 
 /* Fade Transition */

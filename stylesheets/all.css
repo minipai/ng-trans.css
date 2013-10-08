@@ -1,7 +1,13 @@
 /* transition duration */
 .ng-trans > .ng-enter, .ng-trans > .ng-leave {
-  -webkit-transition: 600ms all;
-  transition: 600ms all;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+}
+
+.bouncy > .ng-enter, .bouncy > .ng-leave {
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* COOOOOL CSS EASING ANIMATION TOOL "Ceaser" [http://matthewlein.com/ceaser/] */
 }
 
 /* Fade Transition */
@@ -245,7 +251,28 @@
   opacity: 0;
   -webkit-transform: rotate(-180deg);
 }
+/* COOOOOL CSS EASING ANIMATION TOOL "Ceaser" [http://matthewlein.com/ceaser/] */
+.easeOutBack > .ng-enter, .easeOutBack > .ng-leave {
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.easeOutCirc > .ng-enter, .easeOutCirc > .ng-leave {
+  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.easeOutExpo > .ng-enter, .easeOutExpo > .ng-leave {
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.easeOutQuart > .ng-enter, .easeOutQuart > .ng-leave {
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 /*
+
 
 */
 body {
