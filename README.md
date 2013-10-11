@@ -28,10 +28,32 @@ You only need to add class `ng-trans ng-trans-{{transType}} {{timingFuntion}}` t
 
 ## List of timing functions ({{timingFuntion}})
 
-- easeOutBack
-- easeOutCirc
-- easeOutExpo
+- easeInQuad
+- easeInCubic
+- easeInQuart
+- easeInQuint
+- easeInSine
+- easeInExpo
+- easeInCirc
+- easeInQuad
+- easeInBack
+- easeOutQuad
+- easeOutCubic
 - easeOutQuart
+- easeOutQuint
+- easeOutSine
+- easeOutExpo
+- easeOutCirc
+- easeOutQuad
+- easeOutBack
+- easeInOutCubic
+- easeInOutQuart
+- easeInOutQuint
+- easeInOutSine
+- easeInOutExpo
+- easeInOutCirc
+- easeInOutQuad
+- easeInOutBack
 
 Timing funtions thanks to http://matthewlein.com/ceaser/
 
