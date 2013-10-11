@@ -4,12 +4,6 @@
   transition: 400ms all;
 }
 
-.bouncy > .ng-enter, .bouncy > .ng-leave {
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* COOOOOL CSS EASING ANIMATION TOOL "Ceaser" [http://matthewlein.com/ceaser/] */
-}
-
 /* Fade Transition */
 .ng-trans-fade > .ng-enter {
   opacity: 0;

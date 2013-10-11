@@ -27,20 +27,28 @@
 
 <h2 id='usage'>Usage</h2>
 
-<p>You only need to add class <code>ng-trans ng-trans-{{transType}}</code> to your parent element of <span>ng-repeat</span> to make transition work. Note that ng-trans.css use child selectors, so only the child element of <code>.ng-trans</code> but not all descendant elements will get effected.</p>
+<p>You only need to add class <code>ng-trans ng-trans-{{transType}} {{timingFuntion}}</code> to your parent element of <span>ng-repeat</span> to make transition work. Note that ng-trans.css use child selectors, so only the child element of <code>.ng-trans</code> but not all descendant elements will get effected.</p>
 
-<h2 id='list_of_transitions'>List of transitions</h2>
+<h2 id='list_of_transitions_transtype'>List of transitions ({{transType}})</h2>
 
 <ul>
 <li>fade</li>
 
-<li>fade-down</li>
+<li>fade-left</li>
+
+<li>fade-up</li>
 
 <li>fade-right</li>
 
-<li>slide-down</li>
+<li>fade-down</li>
+
+<li>slide-up</li>
+
+<li>slide-up</li>
 
 <li>slide-right</li>
+
+<li>slide-down</li>
 
 <li>flip-x</li>
 
@@ -49,6 +57,18 @@
 <li>rotate</li>
 </ul>
 
-<p>more transitions developing.</p>
+<h2 id='list_of_timing_functions_timingfuntion'>List of timing functions ({{timingFuntion}})</h2>
+
+<ul>
+<li>easeOutBack</li>
+
+<li>easeOutCirc</li>
+
+<li>easeOutExpo</li>
+
+<li>easeOutQuart</li>
+</ul>
+
+<p>Timing funtions thanks to http://matthewlein.com/ceaser/</p>
   </body>
 </html>
