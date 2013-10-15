@@ -18732,21 +18732,31 @@ angular.module('ngAnimate', ['ng'])
 
   window.App = angular.module('App', ['ngAnimate']);
 
-  App.controller('List', function($scope) {
-    var mockList;
+  App.controller('TransDemo', function($scope, $timeout) {
+    var mockList, push;
     $scope.limit = 3;
-    $scope.more = function() {
-      return $scope.data = $scope.data.concat(mockList);
+    $scope.transType = 'fade';
+    $scope.timingFunction = '';
+    $scope.data = mockList = ['Demo Here'];
+    push = function(i) {
+      return $scope.data.push(i);
     };
     $scope.reset = function() {
-      return $scope.data.length = 3;
+      return $scope.data.length = 0;
     };
-    $scope.transClass = function() {
+    $scope.demoTrans = function(transType) {
+      $scope.transType = transType;
+      return push(transType + ' ' + $scope.timingFunction);
+    };
+    $scope.demoTiming = function(timingFunction) {
+      $scope.timingFunction = timingFunction;
+      return push($scope.transType + ' ' + timingFunction);
+    };
+    return $scope.transClass = function() {
       if ($scope.transType) {
         return "ng-trans ng-trans-" + $scope.transType + " " + $scope.timingFunction;
       }
     };
-    return $scope.data = mockList = ['lorem ipsum dolor sit', 'amet consectetur', 'adipisicing elit'];
   });
 
 }).call(this);
