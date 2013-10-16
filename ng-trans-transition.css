@@ -1,0 +1,253 @@
+/* transition property & duration */
+.ng-trans > .ng-enter, .ng-trans > .ng-leave {
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+}
+
+/* transition types */
+.ng-trans-fade > .ng-enter {
+  opacity: 0;
+}
+.ng-trans-fade > .ng-enter.ng-enter-active,
+.ng-trans-fade .ng-leave {
+  opacity: 1;
+}
+.ng-trans-fade > .ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.ng-trans-fade-left > .ng-enter, .ng-trans-fade-left > .ng-leave {
+  position: relative;
+}
+.ng-trans-fade-left > .ng-enter {
+  opacity: 0;
+  right: -40px;
+}
+.ng-trans-fade-left > .ng-enter.ng-enter-active,
+.ng-trans-fade-left .ng-leave {
+  opacity: 1;
+  right: 0;
+}
+.ng-trans-fade-left > .ng-leave.ng-leave-active {
+  opacity: 0;
+  right: -40px;
+}
+
+.ng-trans-fade-up > .ng-enter, .ng-trans-fade-up > .ng-leave {
+  position: relative;
+}
+.ng-trans-fade-up > .ng-enter {
+  opacity: 0;
+  bottom: -40px;
+}
+.ng-trans-fade-up > .ng-enter.ng-enter-active,
+.ng-trans-fade-up .ng-leave {
+  opacity: 1;
+  bottom: 0;
+}
+.ng-trans-fade-up > .ng-leave.ng-leave-active {
+  opacity: 0;
+  bottom: -40px;
+}
+
+.ng-trans-fade-right > .ng-enter, .ng-trans-fade-right > .ng-leave {
+  position: relative;
+}
+.ng-trans-fade-right > .ng-enter {
+  opacity: 0;
+  left: -40px;
+}
+.ng-trans-fade-right > .ng-enter.ng-enter-active,
+.ng-trans-fade-right .ng-leave {
+  opacity: 1;
+  left: 0;
+}
+.ng-trans-fade-right > .ng-leave.ng-leave-active {
+  opacity: 0;
+  left: -40px;
+}
+
+.ng-trans-fade-down > .ng-enter, .ng-trans-fade-down > .ng-leave {
+  position: relative;
+}
+.ng-trans-fade-down > .ng-enter {
+  opacity: 0;
+  top: -40px;
+}
+.ng-trans-fade-down > .ng-enter.ng-enter-active,
+.ng-trans-fade-down .ng-leave {
+  opacity: 1;
+  top: 0;
+}
+.ng-trans-fade-down > .ng-leave.ng-leave-active {
+  opacity: 0;
+  top: -40px;
+}
+
+.ng-trans-slide-left > .ng-enter, .ng-trans-slide-left > .ng-leave {
+  position: relative;
+}
+.ng-trans-slide-left > .ng-enter {
+  opacity: 0;
+  right: -100%;
+}
+.ng-trans-slide-left > .ng-enter.ng-enter-active,
+.ng-trans-slide-left .ng-leave {
+  opacity: 1;
+  right: 0;
+}
+.ng-trans-slide-left > .ng-leave.ng-leave-active {
+  opacity: 0;
+  right: -100%;
+}
+
+.ng-trans-slide-up > .ng-enter, .ng-trans-slide-up > .ng-leave {
+  position: relative;
+}
+.ng-trans-slide-up > .ng-enter {
+  opacity: 0;
+  bottom: -800px;
+}
+.ng-trans-slide-up > .ng-enter.ng-enter-active,
+.ng-trans-slide-up .ng-leave {
+  opacity: 1;
+  bottom: 0;
+}
+.ng-trans-slide-up > .ng-leave.ng-leave-active {
+  opacity: 0;
+  bottom: -800px;
+}
+
+.ng-trans-slide-right > .ng-enter, .ng-trans-slide-right > .ng-leave {
+  position: relative;
+}
+.ng-trans-slide-right > .ng-enter {
+  opacity: 0;
+  left: -100%;
+}
+.ng-trans-slide-right > .ng-enter.ng-enter-active,
+.ng-trans-slide-right .ng-leave {
+  opacity: 1;
+  left: 0;
+}
+.ng-trans-slide-right > .ng-leave.ng-leave-active {
+  opacity: 0;
+  left: -100%;
+}
+
+.ng-trans-slide-down > .ng-enter, .ng-trans-slide-down > .ng-leave {
+  position: relative;
+}
+.ng-trans-slide-down > .ng-enter {
+  opacity: 0;
+  top: -800px;
+}
+.ng-trans-slide-down > .ng-enter.ng-enter-active,
+.ng-trans-slide-down .ng-leave {
+  opacity: 1;
+  top: 0;
+}
+.ng-trans-slide-down > .ng-leave.ng-leave-active {
+  opacity: 0;
+  top: -800px;
+}
+
+.ng-trans-scale-up > .ng-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.64);
+  -ms-transform: scale(0.64);
+  transform: scale(0.64);
+}
+.ng-trans-scale-up > .ng-enter.ng-enter-active,
+.ng-trans-scale-up .ng-leave {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.ng-trans-scale-up > .ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: scale(0.64);
+  -ms-transform: scale(0.64);
+  transform: scale(0.64);
+}
+
+.ng-trans-scale-down > .ng-enter {
+  opacity: 0;
+  -webkit-transform: scale(1.68);
+  -ms-transform: scale(1.68);
+  transform: scale(1.68);
+}
+.ng-trans-scale-down > .ng-enter.ng-enter-active,
+.ng-trans-scale-down .ng-leave {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.ng-trans-scale-down > .ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: scale(1.68);
+  -ms-transform: scale(1.68);
+  transform: scale(1.68);
+}
+
+.ng-trans-flip-x > .ng-enter {
+  opacity: 0;
+  -webkit-transform: perspective(400px) rotateX(90deg);
+  -ms-transform: perspective(400px) rotateX(90deg);
+  transform: perspective(400px) rotateX(90deg);
+}
+.ng-trans-flip-x > .ng-enter.ng-enter-active,
+.ng-trans-flip-x .ng-leave {
+  opacity: 1;
+  -webkit-transform: perspective(400px) rotateX(0deg);
+  -ms-transform: perspective(400px) rotateX(0deg);
+  transform: perspective(400px) rotateX(0deg);
+}
+.ng-trans-flip-x > .ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: perspective(400px) rotateX(90deg);
+  -ms-transform: perspective(400px) rotateX(90deg);
+  transform: perspective(400px) rotateX(90deg);
+}
+
+.ng-trans-flip-y > .ng-enter {
+  opacity: 0;
+  -webkit-transform: perspective(200px) rotateY(90deg);
+  -ms-transform: perspective(200px) rotateY(90deg);
+  transform: perspective(200px) rotateY(90deg);
+}
+.ng-trans-flip-y > .ng-enter.ng-enter-active,
+.ng-trans-flip-y .ng-leave {
+  opacity: 1;
+  -webkit-transform: perspective(200px) rotateY(0deg);
+  -ms-transform: perspective(200px) rotateY(0deg);
+  transform: perspective(200px) rotateY(0deg);
+}
+.ng-trans-flip-y > .ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: perspective(200px) rotateY(90deg);
+  -ms-transform: perspective(200px) rotateY(90deg);
+  transform: perspective(200px) rotateY(90deg);
+}
+
+.ng-trans-rotate > .ng-enter {
+  opacity: 0;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.ng-trans-rotate > .ng-enter.ng-enter-active,
+.ng-trans-rotate > .ng-leave {
+  opacity: 1;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+.ng-trans-rotate > .ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
