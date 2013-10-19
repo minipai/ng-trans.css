@@ -21,7 +21,7 @@
   <ul class="list-group">
     <li class="list-group-item"><button class="btn btn-danger" ng-click="reset()">Clear List</button></li>
     <li class="list-group-item"
-        ng-repeat="item in data track by $index"
+        ng-repeat="item in data"
         ng-class="'ng-trans ng-trans-'+item.type+' '+item.timing" >
       <b class="remove-x" ng-click="remove($index)">&times;</b> {{ item.type }} {{item.timing}}
     </li>
