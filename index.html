@@ -17,18 +17,19 @@
 
   <body class="index" ng-controller="TransDemo">
     <div id="demo">
-      <ul class="list-group" ng-class="transClass()">
-        <li class="list-group-item"><button class="btn btn-danger" ng-click="reset()">Clear List</button></li>
-        <li class="list-group-item" ng-repeat="item in data track by $index">{{ item }}</li>
-      </ul>
+  <h4>Demo</h4>
+  <ul class="list-group">
+    <li class="list-group-item"><button class="btn btn-danger" ng-click="reset()">Clear List</button></li>
+    <li class="list-group-item"
+        ng-repeat="item in data track by $index"
+        ng-class="'ng-trans ng-trans-'+item.type+' '+item.timing" >
+      <b class="remove-x" ng-click="remove($index)">&times;</b> {{ item.type }} {{item.timing}}
+    </li>
+  </ul>
 </div>
 
 
 <div id="main">
-
-
-
-
 
 <div class="container">
   <div id="header" class="clearfix">
@@ -39,65 +40,63 @@
 
   <div class="row">
     <div class="l col-md-12">
-     <h4><span>Try it</span></h4>
+      <h4><span>Try it</span></h4>
       <p>Select a trasition.</p>
-      <p class="btn-list">
-        <!-- <button class="btn btn-primary" value="">No Transition</button> -->
-        <button class="btn btn-primary" ng-click="demoTrans('fade')" value="fade">fade</button>
-        <button class="btn btn-primary" ng-click="demoTrans('fade-left')" value="fade-left">fade-left</button>
-        <button class="btn btn-primary" ng-click="demoTrans('fade-up')" value="fade-up">fade-up</button>
-        <button class="btn btn-primary" ng-click="demoTrans('fade-right')" value="fade-right">fade-right</button>
-        <button class="btn btn-primary" ng-click="demoTrans('fade-down')" value="fade-down">fade-down</button>
-      <p class="btn-list">
-        <button class="btn btn-primary" ng-click="demoTrans('slide-left')"  value="slide-left">slide-left</button>
-        <button class="btn btn-primary" ng-click="demoTrans('slide-up')"  value="slide-up">slide-up</button>
-        <button class="btn btn-primary" ng-click="demoTrans('slide-right')"  value="slide-right">slide-right</button>
-        <button class="btn btn-primary" ng-click="demoTrans('slide-down')"  value="slide-down">slide-down</button>
-      <p class="btn-list">
-        <button class="btn btn-primary" ng-click="demoTrans('scale-up')"  value="scale-up">scale-up</button>
-        <button class="btn btn-primary" ng-click="demoTrans('scale-down')"  value="scale-down">scale-down</button>
-        <button class="btn btn-primary" ng-click="demoTrans('flip-x')"  value="flip-x">flip-x</button>
-        <button class="btn btn-primary" ng-click="demoTrans('flip-y')"  value="flip-y">flip-y</button>
-        <button class="btn btn-primary" ng-click="demoTrans('rotate')"  value="rotate">rotate</button>
 
+      <p class="btn-list">
+        <button class="btn btn-primary" demo-trans="fade"       ></button>
+        <button class="btn btn-primary" demo-trans="fade-left"  ></button>
+        <button class="btn btn-primary" demo-trans="fade-up"    ></button>
+        <button class="btn btn-primary" demo-trans="fade-right" ></button>
+        <button class="btn btn-primary" demo-trans="fade-down"  ></button>
+
+      <p class="btn-list">
+        <button class="btn btn-primary" demo-trans="slide-left" ></button>
+        <button class="btn btn-primary" demo-trans="slide-up"   ></button>
+        <button class="btn btn-primary" demo-trans="slide-right"></button>
+        <button class="btn btn-primary" demo-trans="slide-down" ></button>
+
+      <p class="btn-list">
+        <button class="btn btn-primary" demo-trans="scale-up"   ></button>
+        <button class="btn btn-primary" demo-trans="scale-down" ></button>
+        <button class="btn btn-primary" demo-trans="flip-x"     ></button>
+        <button class="btn btn-primary" demo-trans="flip-y"     ></button>
+        <button class="btn btn-primary" demo-trans="rotate"     ></button>
 
       <p>Select a timing function.</p>
-      <p>
-        <button class="btn btn-primary" ng-click="demoTiming('')">None</button>
       <p class="btn-list">
-        <button class="btn btn-primary" ng-click="demoTiming('easeInQuad')" value="easeInQuad">easeInQuad</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInCubic')"  value="easeInCubic">easeInCubic</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInQuart')"  value="easeInQuart">easeInQuart</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInQuint')"  value="easeInQuint">easeInQuint</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInSine')"  value="easeInSine">easeInSine</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInExpo')"  value="easeInExpo">easeInExpo</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInCirc')"  value="easeInCirc">easeInCirc</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInQuad')"  value="easeInQuad">easeInQuad</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInBack')"  value="easeInBack">easeInBack</button>
+        <button class="btn btn-primary" demo-timing="None"></button>
       <p class="btn-list">
-        <button class="btn btn-primary" ng-click="demoTiming('easeOutQuad')"  value="easeOutQuad">easeOutQuad</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeOutCubic')"  value="easeOutCubic">easeOutCubic</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeOutQuart')"  value="easeOutQuart">easeOutQuart</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeOutQuint')"  value="easeOutQuint">easeOutQuint</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeOutSine')"  value="easeOutSine">easeOutSine</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeOutCirc')"  value="easeOutCirc">easeOutCirc</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeOutQuad')"  value="easeOutQuad">easeOutQuad</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeOutBack')"  value="easeOutBack">easeOutBack</button>
+        <button class="btn btn-primary" demo-timing="easeInQuad"  ></button>
+        <button class="btn btn-primary" demo-timing="easeInCubic" ></button>
+        <button class="btn btn-primary" demo-timing="easeInQuart" ></button>
+        <button class="btn btn-primary" demo-timing="easeInQuint" ></button>
+        <button class="btn btn-primary" demo-timing="easeInSine"  ></button>
+        <button class="btn btn-primary" demo-timing="easeInExpo"  ></button>
+        <button class="btn btn-primary" demo-timing="easeInCirc"  ></button>
+        <button class="btn btn-primary" demo-timing="easeInQuad"  ></button>
+        <button class="btn btn-primary" demo-timing="easeInBack"  ></button>
       <p class="btn-list">
-        <button class="btn btn-primary" ng-click="demoTiming('easeInOutCubic')"  value="easeInOutCubic">easeInOutCubic</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInOutQuart')"  value="easeInOutQuart">easeInOutQuart</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInOutQuint')"  value="easeInOutQuint">easeInOutQuint</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInOutSine')"  value="easeInOutSine">easeInOutSine</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInOutExpo')"  value="easeInOutExpo">easeInOutExpo</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInOutCirc')"  value="easeInOutCirc">easeInOutCirc</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInOutQuad')"  value="easeInOutQuad">easeInOutQuad</button>
-        <button class="btn btn-primary" ng-click="demoTiming('easeInOutBack')"  value="easeInOutBack">easeInOutBack</button>
-
-
-      </p>
-
+        <button class="btn btn-primary" demo-timing="easeOutQuad" ></button>
+        <button class="btn btn-primary" demo-timing="easeOutCubic"></button>
+        <button class="btn btn-primary" demo-timing="easeOutQuart"></button>
+        <button class="btn btn-primary" demo-timing="easeOutQuint"></button>
+        <button class="btn btn-primary" demo-timing="easeOutSine" ></button>
+        <button class="btn btn-primary" demo-timing="easeOutCirc" ></button>
+        <button class="btn btn-primary" demo-timing="easeOutQuad" ></button>
+        <button class="btn btn-primary" demo-timing="easeOutBack" ></button>
+      <p class="btn-list">
+        <button class="btn btn-primary" demo-timing="easeInOutCubic"></button>
+        <button class="btn btn-primary" demo-timing="easeInOutQuart"></button>
+        <button class="btn btn-primary" demo-timing="easeInOutQuint"></button>
+        <button class="btn btn-primary" demo-timing="easeInOutSine" ></button>
+        <button class="btn btn-primary" demo-timing="easeInOutExpo" ></button>
+        <button class="btn btn-primary" demo-timing="easeInOutCirc" ></button>
+        <button class="btn btn-primary" demo-timing="easeInOutQuad" ></button>
+        <button class="btn btn-primary" demo-timing="easeInOutBack" ></button>
 
      </div>
+    <br>
     <div class="col-md-12">
       <h4>Install</h4>
       <p>Use <a href="http://bower.io">bower</a> to install: <code>bower install ng-trans-css</code>, or <a href="ng-trans.css">download</a>.</p>
@@ -105,13 +104,13 @@
       <h4>Usage</h4>
       <ol>
         <li>Link your webpage to ng-trans.css</li>
-        <li ng-non-bindable>Add class <b>ng-trans ng-trans-{{transType}}</b> to your parent element of ng-repeat to make transition work.</li>
+        <li ng-non-bindable>Add class <b>ng-trans ng-trans-{{transType}}</b> to your the element of ng-repeat to make transition work.</li>
         <li ng-non-bindable>In addition, you can add class <b>{{timingFunction}}</b> to set timing fcuntion. (<b>easeOutBack</b> will bounce!)</li>
       </ol>
       <pre>
         <code>
-&lt;ul class=&quot;list-group ng-trans ng-trans-<b>{{transType}}</b> <b>{{timingFunction}}</b>&quot;&gt;
-  &lt;li class=&quot;list-group-item&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
+&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item ng-trans ng-trans-<b>{{transType}}</b> <b>{{timingFunction}}</b>&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
 &lt;/ul&gt;
         </code>
       </pre>

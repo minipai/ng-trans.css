@@ -34,7 +34,9 @@ h4 {
 }
 #demo .list-group {
   margin: 10px;
-  opacity: 0.6;
+}
+#demo li {
+  background-color: #FDEFCD;
 }
 
 #main {
@@ -88,4 +90,14 @@ h4 {
 .css-code {
   height: 30em;
   overflow: auto;
+}
+
+.remove-x {
+  font-size: 18px;
+  padding: 4px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.remove-x:hover {
+  opacity: 1;
 }
