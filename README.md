@@ -8,8 +8,18 @@ To see demo, check out http://minipai.github.io/ng-trans.css/
 ##Requirements
 You need AngularJS 1.2 with ngAnimate.
 
+ng-trans.css works directives that will add `.ng-leave`, `.ng-leave-active`, `.ng-enter` and `.ng-enter-active` CSS classes. This includes ngRepeat, ngInclude, ngIf, ngView.
+
 ##Usage
-You only need to add class `ng-trans ng-trans-{{transType}} {{timingFuntion}}` to your parent element of [ng-repeat] to make transition work. Note that ng-trans.css use child selectors, so only the child element of `.ng-trans` but not all descendant elements will get effected.
+You only need to add class `ng-trans ng-trans-{{transType}} {{timingFuntion}}` to the element to make transition work.
+
+```
+<ul>
+  <li class=" ng-trans ng-trans-rotate easeOutBack" ng-repeat="item in data"></li>
+</ul>
+```
+
+**Before v0.5.0 class needed to add to parent element. However, its changed to enable doing more fancy stuffs.**
 
 ## List of transitions ({{transType}})
 

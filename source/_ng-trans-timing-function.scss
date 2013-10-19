@@ -3,7 +3,7 @@
 @import "ceaser-easing";
 
 @mixin ng-trans-timing-function($ceaser) {
-  > .ng-enter, > .ng-leave {
+  &.ng-enter, &.ng-leave {
     -webkit-transition-timing-function: ceaser($ceaser);
         -ms-transition-timing-function: ceaser($ceaser);
             transition-timing-function: ceaser($ceaser);
