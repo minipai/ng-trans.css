@@ -82,6 +82,9 @@ h4 {
   background-color: #92950f;
   border: 1px solid #898b0e;
 }
+.btn-primary.active {
+  background-color: #3276B1;
+}
 
 .btn-list {
   line-height: 2.7em;
