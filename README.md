@@ -21,6 +21,14 @@ You only need to add class `ng-trans ng-trans-{{transType}} {{timingFuntion}}` t
 
 **Before v0.5.0 class needed to add to parent element. However, its changed to enable doing more fancy stuffs.**
 
+## Builds
+
+- ng-trans.css contains all transitions and timing functions.
+- ng-trans-transitions.css contains all transitions.
+- ng-trans-timing-function.css contains all timing functions.
+
+
+
 ## List of transitions ({{transType}})
 
 - fade
