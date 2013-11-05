@@ -15,7 +15,7 @@ You only need to add class `ng-trans ng-trans-{{transType}} {{timingFuntion}}` t
 
 ```
 <ul>
-  <li class=" ng-trans ng-trans-rotate easeOutBack" ng-repeat="item in data"></li>
+  <li class="ng-trans ng-trans-rotate easeOutBack" ng-repeat="item in data"></li>
 </ul>
 ```
 
@@ -23,55 +23,30 @@ You only need to add class `ng-trans ng-trans-{{transType}} {{timingFuntion}}` t
 
 ## Builds
 
-- ng-trans.css contains all transitions and timing functions.
-- ng-trans-transitions.css contains all transitions.
-- ng-trans-timing-function.css contains all timing functions.
+- **ng-trans.css** contains all transitions and timing functions.
+- **ng-trans-transitions.css** contains all transitions.
+- **ng-trans-timing-function.css** contains all timing functions.
 
 
 
 ## List of transitions ({{transType}})
 
-- fade
-- fade-left
-- fade-up
-- fade-right
-- fade-down
-- slide-up
-- slide-up
-- slide-right
-- slide-down
-- flip-x
-- flip-y
+- fade, fade-left, fade-up, fade-right, fade-down
+- slide-up, slide-up, slide-right, slide-down
+- scale-up, scale-down
+- flip-x, flip-y
 - rotate
+
+
 
 ## List of timing functions ({{timingFuntion}})
 
-- easeInQuad
-- easeInCubic
-- easeInQuart
-- easeInQuint
-- easeInSine
-- easeInExpo
-- easeInCirc
-- easeInQuad
-- easeInBack
-- easeOutQuad
-- easeOutCubic
-- easeOutQuart
-- easeOutQuint
-- easeOutSine
-- easeOutExpo
-- easeOutCirc
-- easeOutQuad
-- easeOutBack
-- easeInOutCubic
-- easeInOutQuart
-- easeInOutQuint
-- easeInOutSine
-- easeInOutExpo
-- easeInOutCirc
-- easeInOutQuad
-- easeInOutBack
+- easeInQuad, easeInCubic, easeInQuart, easeInQuint, easeInSine
+- easeInExpo, easeInCirc, easeInQuad, easeInBack
+- easeOutQuad, easeOutCubic, easeOutQuart, easeOutQuint, easeOutSine
+- easeOutExpo, easeOutCirc, easeOutQuad, easeOutBack
+- easeInOutCubic, easeInOutQuart, easeInOutQuint, easeInOutSine
+- easeInOutExpo, easeInOutCirc, easeInOutQuad, easeInOutBack
 
 Timing funtions thanks to http://matthewlein.com/ceaser/
 
