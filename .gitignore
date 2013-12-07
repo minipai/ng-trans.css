@@ -16,3 +16,5 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
+.sass-cache/*
+node_modules/*
