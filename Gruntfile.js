@@ -5,6 +5,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'ng-trans.css': 'source/ng-trans.scss',
+          'document/ng-trans.css': 'source/ng-trans.scss',
         }
       }
     },

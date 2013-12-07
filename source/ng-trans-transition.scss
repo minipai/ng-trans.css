@@ -233,7 +233,6 @@ $trans-duration: 400ms       !default;
   }
 
 
-
   // Flip transition
   @if $type == flip-x {
     &.ng-enter {
