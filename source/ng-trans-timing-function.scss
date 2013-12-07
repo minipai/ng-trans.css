@@ -42,9 +42,9 @@ $easeInOutBack  : cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
 
 @mixin ng-trans-timing-function($ceaser) {
-  &.ng-enter, &.ng-leave {
-    -webkit-transition-timing-function: ceaser($ceaser);
-        -ms-transition-timing-function: ceaser($ceaser);
-            transition-timing-function: ceaser($ceaser);
+  &.ng-trans {
+    -webkit-transition-timing-function: $ceaser;
+        -ms-transition-timing-function: $ceaser;
+            transition-timing-function: $ceaser;
     }
 }
