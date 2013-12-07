@@ -1,0 +1,24 @@
+{
+  "name": "ng-trans.css",
+  "version": "0.6.0",
+  "description": "Plug-and-play transition for AngularJS.",
+  "main": "ng-trans.css",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-sass": "~0.5.1",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minipai/ng-trans.css.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "transition",
+    "css"
+  ],
+  "author": "Art Pai <art@stylecoder.tw>",
+  "license": "MIT"
+}

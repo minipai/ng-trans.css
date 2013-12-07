@@ -1,6 +1,6 @@
 $trans-selector: '.ng-trans';
 $trans-property: all;
-$trans-duration: 400ms;
+$trans-duration: 500ms;
 
 @import "ng-trans-transition.scss";
 
@@ -24,32 +24,37 @@ $trans-duration: 400ms;
 #{$trans-selector}-rotate      { @include ng-trans-type('rotate') }
 
 
-@import "_ng-trans-timing-function.scss";
+@import "ng-trans-timing-function.scss";
 
 /* transition timing functions */
-.easeInQuad     { @include ng-trans-timing-function( $easeInQuad ) }
 .easeInCubic    { @include ng-trans-timing-function( $easeInCubic ) }
-.easeInQuart    { @include ng-trans-timing-function( $easeInQuart ) }
-.easeInQuint    { @include ng-trans-timing-function( $easeInQuint ) }
-.easeInSine     { @include ng-trans-timing-function( $easeInSine ) }
-.easeInExpo     { @include ng-trans-timing-function( $easeInExpo ) }
-.easeInCirc     { @include ng-trans-timing-function( $easeInCirc ) }
-.easeInQuad     { @include ng-trans-timing-function( $easeInQuad ) }
-.easeInBack     { @include ng-trans-timing-function( $easeInBack ) }
-.easeOutQuad    { @include ng-trans-timing-function( $easeOutQuad ) }
 .easeOutCubic   { @include ng-trans-timing-function( $easeOutCubic ) }
-.easeOutQuart   { @include ng-trans-timing-function( $easeOutQuart ) }
-.easeOutQuint   { @include ng-trans-timing-function( $easeOutQuint ) }
-.easeOutSine    { @include ng-trans-timing-function( $easeOutSine ) }
-.easeOutExpo    { @include ng-trans-timing-function( $easeOutExpo ) }
-.easeOutCirc    { @include ng-trans-timing-function( $easeOutCirc ) }
-.easeOutQuad    { @include ng-trans-timing-function( $easeOutQuad ) }
-.easeOutBack    { @include ng-trans-timing-function( $easeOutBack ) }
 .easeInOutCubic { @include ng-trans-timing-function( $easeInOutCubic ) }
-.easeInOutQuart { @include ng-trans-timing-function( $easeInOutQuart ) }
-.easeInOutQuint { @include ng-trans-timing-function( $easeInOutQuint ) }
-.easeInOutSine  { @include ng-trans-timing-function( $easeInOutSine ) }
-.easeInOutExpo  { @include ng-trans-timing-function( $easeInOutExpo ) }
-.easeInOutCirc  { @include ng-trans-timing-function( $easeInOutCirc ) }
+
+.easeInQuad     { @include ng-trans-timing-function( $easeInQuad ) }
+.easeOutQuad    { @include ng-trans-timing-function( $easeOutQuad ) }
 .easeInOutQuad  { @include ng-trans-timing-function( $easeInOutQuad ) }
+
+.easeInQuart    { @include ng-trans-timing-function( $easeInQuart ) }
+.easeOutQuart   { @include ng-trans-timing-function( $easeOutQuart ) }
+.easeInOutQuart { @include ng-trans-timing-function( $easeInOutQuart ) }
+
+.easeInQuint    { @include ng-trans-timing-function( $easeInQuint ) }
+.easeOutQuint   { @include ng-trans-timing-function( $easeOutQuint ) }
+.easeInOutQuint { @include ng-trans-timing-function( $easeInOutQuint ) }
+
+.easeInSine     { @include ng-trans-timing-function( $easeInSine ) }
+.easeOutSine    { @include ng-trans-timing-function( $easeOutSine ) }
+.easeInOutSine  { @include ng-trans-timing-function( $easeInOutSine ) }
+
+.easeInExpo     { @include ng-trans-timing-function( $easeInExpo ) }
+.easeOutExpo    { @include ng-trans-timing-function( $easeOutExpo ) }
+.easeInOutExpo  { @include ng-trans-timing-function( $easeInOutExpo ) }
+
+.easeInCirc     { @include ng-trans-timing-function( $easeInCirc ) }
+.easeOutCirc    { @include ng-trans-timing-function( $easeOutCirc ) }
+.easeInOutCirc  { @include ng-trans-timing-function( $easeInOutCirc ) }
+
+.easeInBack     { @include ng-trans-timing-function( $easeInBack ) }
+.easeOutBack    { @include ng-trans-timing-function( $easeOutBack ) }
 .easeInOutBack  { @include ng-trans-timing-function( $easeInOutBack ) }
