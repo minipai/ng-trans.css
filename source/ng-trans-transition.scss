@@ -26,164 +26,165 @@ $trans-duration: 400ms       !default;
 
   // Fade-left transition
   @if $type == fade-left {
-    &.ng-enter, &.ng-leave {
-      position: relative;
-    }
     &.ng-enter {
         opacity: 0;
-        right: -40px;
+        -webkit-transform: translate(-40px, 0);
+                transform: translate(-40px, 0);
     }
     &.ng-enter.ng-enter-active,
       .ng-leave {
         opacity: 1;
-        right: 0;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        right: -40px;
+        -webkit-transform: translate(-40px, 0);
+                transform: translate(-40px, 0);
     }
   }
 
   // Fade-up transition
   @if $type == fade-up {
-    &.ng-enter, &.ng-leave {
-      position: relative;
-    }
     &.ng-enter {
         opacity: 0;
-        bottom: -40px;
+        -webkit-transform: translate(0, -40px);
+                transform: translate(0, -40px);
     }
     &.ng-enter.ng-enter-active,
       .ng-leave {
         opacity: 1;
-        bottom: 0;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        bottom: -40px;
+        -webkit-transform: translate(0, -40px);
+                transform: translate(0, -40px);
     }
   }
 
   // Fade-right transition
   @if $type == fade-right {
-    &.ng-enter, &.ng-leave {
-      position: relative;
-    }
     &.ng-enter {
         opacity: 0;
-        left: -40px;
+        -webkit-transform: translate(40px, 0);
+                transform: translate(40px, 0);
     }
     &.ng-enter.ng-enter-active,
       .ng-leave {
         opacity: 1;
-        left: 0;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        left: -40px;
+        -webkit-transform: translate(40px, 0);
+                transform: translate(40px, 0);
     }
   }
 
   // Fade-down transition
   @if $type == fade-down {
-    &.ng-enter, &.ng-leave {
-      position: relative;
-    }
     &.ng-enter {
         opacity: 0;
-        top: -40px;
+        -webkit-transform: translate(0, 40px);
+                transform: translate(0, 40px);
     }
     &.ng-enter.ng-enter-active,
       .ng-leave {
         opacity: 1;
-        top: 0;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        top: -40px;
+        -webkit-transform: translate(0, 40px);
+                transform: translate(0, 40px);
     }
   }
 
   // Slide transition
   @if $type == slide-left {
-    &.ng-enter, &.ng-leave {
-      position: relative;
-    }
     &.ng-enter {
         opacity: 0;
-        right: -100%;
+        -webkit-transform: translate(-100%, 0);
+                transform: translate(-100%, 0);
     }
     &.ng-enter.ng-enter-active,
       .ng-leave {
         opacity: 1;
-        right: 0;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        right: -100%;
+        -webkit-transform: translate(-100%, 0);
+                transform: translate(-100%, 0);
     }
   }
 
 
   // Slide transition
   @if $type == slide-up {
-    &.ng-enter, &.ng-leave {
-      position: relative;
-    }
     &.ng-enter {
         opacity: 0;
-        bottom: -800px;
+        -webkit-transform: translate(0, -800px);
+                transform: translate(0, -800px);
     }
     &.ng-enter.ng-enter-active,
       .ng-leave {
         opacity: 1;
-        bottom: 0;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        bottom: -800px;
+        -webkit-transform: translate(0, -800px);
+                transform: translate(0, -800px);
     }
   }
 
   // Slide transition
   @if $type == slide-right {
-    &.ng-enter, &.ng-leave {
-      position: relative;
-    }
     &.ng-enter {
         opacity: 0;
-        left: -100%;
+        -webkit-transform: translate(100%, 0);
+                transform: translate(100%, 0);
     }
     &.ng-enter.ng-enter-active,
       .ng-leave {
         opacity: 1;
-        left: 0;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        left: -100%;
+        -webkit-transform: translate(100%, 0);
+                transform: translate(100%, 0);
     }
   }
 
 
   // Slide transition
   @if $type == slide-down {
-    &.ng-enter, &.ng-leave {
-      position: relative;
-    }
     &.ng-enter {
         opacity: 0;
-        top: -800px;
+        -webkit-transform: translate(0, 800px);
+                transform: translate(0, 800px);
     }
     &.ng-enter.ng-enter-active,
       .ng-leave {
         opacity: 1;
-        top: 0;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        top: -800px;
+        -webkit-transform: translate(0, 800px);
+                transform: translate(0, 800px);
     }
+
   }
 
   // Scale transition
