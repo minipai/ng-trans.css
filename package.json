@@ -1,6 +1,6 @@
 {
   "name": "ng-trans.css",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "Plug-and-play transition for AngularJS.",
   "main": "ng-trans.css",
   "dependencies": {},
