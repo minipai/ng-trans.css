@@ -34,18 +34,21 @@ If you want to apply transitions with your own selector, include @minxins in **_
 ```
 @import "ng-trans-transition.scss";
 
-$trans-property: all;
-$trans-duration: 400ms;
+$trans-duration: 400ms; // default duration time
 
 .your-selector {
-  @include ng-trans();
+  @include ng-trans(); // if will use 400ms
+  @include ng-trans-type( transType );
+}
+
+.your-selector {
+  @include ng-trans(500ms);
   @include ng-trans-type( transType );
 }
 
 ```
-- `$trans-property` sets the property that should have transition. E.g. `all`, `opacity`.
-- `$trans-duration` sets the duration time of transition. E.g. `500ms`, `1s`.
-- `@include ng-trans()` is required. transition-property and transition-duration is done here;
+- `$trans-duration` sets the default duration time of transition. E.g. `500ms`, `1s`.
+- `@include ng-trans( $duration )` is required. transition-property and transition-duration is setted here;
 - `@include ng-trans-type( transType )`  where transType may be one of the transition in the list below.
 
 For mixins of timimg funcitons, checkout [matthewlein / Ceaser](https://github.com/matthewlein/Ceaser/tree/master/developer) or [jhardy / compass-ceaser-easing](https://github.com/jhardy/compass-ceaser-easing).

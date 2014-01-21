@@ -2,10 +2,10 @@ $trans-property: all         !default;
 $trans-duration: 400ms       !default;
 
 // transition property & duration
-@mixin ng-trans() {
+@mixin ng-trans($duration:$trans-duration, $property:$trans-property) {
   &.ng-enter, &.ng-leave {
-    -webkit-transition: $trans-duration $trans-property;
-            transition: $trans-duration $trans-property;
+    -webkit-transition: $duration $property;
+            transition: $duration $property;
   }
 }
 
