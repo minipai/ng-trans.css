@@ -1,0 +1,136 @@
+$trans-selector = '.ng-trans';
+$trans-property = all;
+$trans-duration = 450ms;
+
+@import "ng-trans-transition";
+@import "ng-trans-timing-function";
+
+/* transition property & duration */
+{$trans-selector}             {
+  ng-trans($trans-duration, $trans-property)
+}
+
+/* transition types */
+{$trans-selector}-fade        {
+  ng-trans-type(fade)
+}
+{$trans-selector}-fade-left   {
+  ng-trans-type(fade-left)
+}
+{$trans-selector}-fade-up     {
+  ng-trans-type(fade-up)
+}
+{$trans-selector}-fade-right  {
+  ng-trans-type(fade-right)
+}
+{$trans-selector}-fade-down   {
+  ng-trans-type(fade-down)
+}
+{$trans-selector}-slide-left  {
+  ng-trans-type(slide-left)
+}
+{$trans-selector}-slide-up    {
+  ng-trans-type(slide-up)
+}
+{$trans-selector}-slide-right {
+  ng-trans-type(slide-right)
+}
+{$trans-selector}-slide-down  {
+  ng-trans-type(slide-down)
+}
+{$trans-selector}-scale-up    {
+  ng-trans-type(scale-up)
+}
+{$trans-selector}-scale-down  {
+  ng-trans-type(scale-down)
+}
+{$trans-selector}-flip-x      {
+  ng-trans-type(flip-x)
+}
+{$trans-selector}-flip-y      {
+  ng-trans-type(flip-y)
+}
+{$trans-selector}-rotate      {
+  ng-trans-type(rotate)
+}
+
+/* transition timing functions */
+.easeInCubic    {
+  ng-trans-timing-function( $easeInCubic )
+}
+.easeOutCubic   {
+  ng-trans-timing-function( $easeOutCubic )
+}
+.easeInOutCubic {
+  ng-trans-timing-function( $easeInOutCubic )
+}
+
+.easeInQuad     {
+  ng-trans-timing-function( $easeInQuad )
+}
+.easeOutQuad    {
+  ng-trans-timing-function( $easeOutQuad )
+}
+.easeInOutQuad  {
+  ng-trans-timing-function( $easeInOutQuad )
+}
+
+.easeInQuart    {
+  ng-trans-timing-function( $easeInQuart )
+}
+.easeOutQuart   {
+  ng-trans-timing-function( $easeOutQuart )
+}
+.easeInOutQuart {
+  ng-trans-timing-function( $easeInOutQuart )
+}
+
+.easeInQuint    {
+  ng-trans-timing-function( $easeInQuint )
+}
+.easeOutQuint   {
+  ng-trans-timing-function( $easeOutQuint )
+}
+.easeInOutQuint {
+  ng-trans-timing-function( $easeInOutQuint )
+}
+
+.easeInSine     {
+  ng-trans-timing-function( $easeInSine )
+}
+.easeOutSine    {
+  ng-trans-timing-function( $easeOutSine )
+}
+.easeInOutSine  {
+  ng-trans-timing-function( $easeInOutSine )
+}
+
+.easeInExpo     {
+  ng-trans-timing-function( $easeInExpo )
+}
+.easeOutExpo    {
+  ng-trans-timing-function( $easeOutExpo )
+}
+.easeInOutExpo  {
+  ng-trans-timing-function( $easeInOutExpo )
+}
+
+.easeInCirc     {
+  ng-trans-timing-function( $easeInCirc )
+}
+.easeOutCirc    {
+  ng-trans-timing-function( $easeOutCirc )
+}
+.easeInOutCirc  {
+  ng-trans-timing-function( $easeInOutCirc )
+}
+
+.easeInBack     {
+  ng-trans-timing-function( $easeInBack )
+}
+.easeOutBack    {
+  ng-trans-timing-function( $easeOutBack )
+}
+.easeInOutBack  {
+  ng-trans-timing-function( $easeInOutBack )
+}

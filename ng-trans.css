@@ -1,331 +1,361 @@
 /* transition property & duration */
-.ng-trans.ng-enter, .ng-trans.ng-leave {
+.ng-trans.ng-enter,
+.ng-trans.ng-leave {
   -webkit-transition: 450ms all;
-  transition: 450ms all; }
-
+  transition: 450ms all;
+}
 /* transition types */
 .ng-trans-fade.ng-enter {
-  opacity: 0; }
+  opacity: 0;
+}
 .ng-trans-fade.ng-enter.ng-enter-active,
-.ng-trans-fade .ng-leave {
-  opacity: 1; }
+.ng-trans-fade.ng-leave {
+  opacity: 1;
+}
 .ng-trans-fade.ng-leave.ng-leave-active {
-  opacity: 0; }
-
+  opacity: 0;
+}
 .ng-trans-fade-left.ng-enter {
   opacity: 0;
   -webkit-transform: translate(-40px, 0);
-  transform: translate(-40px, 0); }
+  transform: translate(-40px, 0);
+}
 .ng-trans-fade-left.ng-enter.ng-enter-active,
-.ng-trans-fade-left .ng-leave {
+.ng-trans-fade-left.ng-leave {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+}
 .ng-trans-fade-left.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate(-40px, 0);
-  transform: translate(-40px, 0); }
-
+  transform: translate(-40px, 0);
+}
 .ng-trans-fade-up.ng-enter {
   opacity: 0;
   -webkit-transform: translate(0, -40px);
-  transform: translate(0, -40px); }
+  transform: translate(0, -40px);
+}
 .ng-trans-fade-up.ng-enter.ng-enter-active,
-.ng-trans-fade-up .ng-leave {
+.ng-trans-fade-up.ng-leave {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+}
 .ng-trans-fade-up.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate(0, -40px);
-  transform: translate(0, -40px); }
-
+  transform: translate(0, -40px);
+}
 .ng-trans-fade-right.ng-enter {
   opacity: 0;
   -webkit-transform: translate(40px, 0);
-  transform: translate(40px, 0); }
+  transform: translate(40px, 0);
+}
 .ng-trans-fade-right.ng-enter.ng-enter-active,
-.ng-trans-fade-right .ng-leave {
+.ng-trans-fade-right.ng-leave {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+}
 .ng-trans-fade-right.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate(40px, 0);
-  transform: translate(40px, 0); }
-
+  transform: translate(40px, 0);
+}
 .ng-trans-fade-down.ng-enter {
   opacity: 0;
   -webkit-transform: translate(0, 40px);
-  transform: translate(0, 40px); }
+  transform: translate(0, 40px);
+}
 .ng-trans-fade-down.ng-enter.ng-enter-active,
-.ng-trans-fade-down .ng-leave {
+.ng-trans-fade-down.ng-leave {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+}
 .ng-trans-fade-down.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate(0, 40px);
-  transform: translate(0, 40px); }
-
+  transform: translate(0, 40px);
+}
 .ng-trans-slide-left.ng-enter {
   opacity: 0;
   -webkit-transform: translate(-100%, 0);
-  transform: translate(-100%, 0); }
+  transform: translate(-100%, 0);
+}
 .ng-trans-slide-left.ng-enter.ng-enter-active,
-.ng-trans-slide-left .ng-leave {
+.ng-trans-slide-left.ng-leave {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+}
 .ng-trans-slide-left.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate(-100%, 0);
-  transform: translate(-100%, 0); }
-
+  transform: translate(-100%, 0);
+}
 .ng-trans-slide-up.ng-enter {
   opacity: 0;
   -webkit-transform: translate(0, -800px);
-  transform: translate(0, -800px); }
+  transform: translate(0, -800px);
+}
 .ng-trans-slide-up.ng-enter.ng-enter-active,
-.ng-trans-slide-up .ng-leave {
+.ng-trans-slide-up.ng-leave {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+}
 .ng-trans-slide-up.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate(0, -800px);
-  transform: translate(0, -800px); }
-
+  transform: translate(0, -800px);
+}
 .ng-trans-slide-right.ng-enter {
   opacity: 0;
   -webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0); }
+  transform: translate(100%, 0);
+}
 .ng-trans-slide-right.ng-enter.ng-enter-active,
-.ng-trans-slide-right .ng-leave {
+.ng-trans-slide-right.ng-leave {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+}
 .ng-trans-slide-right.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0); }
-
+  transform: translate(100%, 0);
+}
 .ng-trans-slide-down.ng-enter {
   opacity: 0;
   -webkit-transform: translate(0, 800px);
-  transform: translate(0, 800px); }
+  transform: translate(0, 800px);
+}
 .ng-trans-slide-down.ng-enter.ng-enter-active,
-.ng-trans-slide-down .ng-leave {
+.ng-trans-slide-down.ng-leave {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+}
 .ng-trans-slide-down.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate(0, 800px);
-  transform: translate(0, 800px); }
-
+  transform: translate(0, 800px);
+}
 .ng-trans-scale-up.ng-enter {
   opacity: 0;
   -webkit-transform: scale(0.64);
   -ms-transform: scale(0.64);
-  transform: scale(0.64); }
+  transform: scale(0.64);
+}
 .ng-trans-scale-up.ng-enter.ng-enter-active,
-.ng-trans-scale-up .ng-leave {
+.ng-trans-scale-up.ng-leave {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
-  transform: scale(1); }
+  transform: scale(1);
+}
 .ng-trans-scale-up.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: scale(0.64);
   -ms-transform: scale(0.64);
-  transform: scale(0.64); }
-
+  transform: scale(0.64);
+}
 .ng-trans-scale-down.ng-enter {
   opacity: 0;
   -webkit-transform: scale(1.68);
   -ms-transform: scale(1.68);
-  transform: scale(1.68); }
+  transform: scale(1.68);
+}
 .ng-trans-scale-down.ng-enter.ng-enter-active,
-.ng-trans-scale-down .ng-leave {
+.ng-trans-scale-down.ng-leave {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
-  transform: scale(1); }
+  transform: scale(1);
+}
 .ng-trans-scale-down.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: scale(1.68);
   -ms-transform: scale(1.68);
-  transform: scale(1.68); }
-
+  transform: scale(1.68);
+}
 .ng-trans-flip-x.ng-enter {
   opacity: 0;
   -webkit-transform: perspective(400px) rotateX(90deg);
   -ms-transform: perspective(400px) rotateX(90deg);
-  transform: perspective(400px) rotateX(90deg); }
+  transform: perspective(400px) rotateX(90deg);
+}
 .ng-trans-flip-x.ng-enter.ng-enter-active,
-.ng-trans-flip-x .ng-leave {
+.ng-trans-flip-x.ng-leave {
   opacity: 1;
   -webkit-transform: perspective(400px) rotateX(0deg);
   -ms-transform: perspective(400px) rotateX(0deg);
-  transform: perspective(400px) rotateX(0deg); }
+  transform: perspective(400px) rotateX(0deg);
+}
 .ng-trans-flip-x.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: perspective(400px) rotateX(90deg);
   -ms-transform: perspective(400px) rotateX(90deg);
-  transform: perspective(400px) rotateX(90deg); }
-
+  transform: perspective(400px) rotateX(90deg);
+}
 .ng-trans-flip-y.ng-enter {
   opacity: 0;
   -webkit-transform: perspective(200px) rotateY(90deg);
   -ms-transform: perspective(200px) rotateY(90deg);
-  transform: perspective(200px) rotateY(90deg); }
+  transform: perspective(200px) rotateY(90deg);
+}
 .ng-trans-flip-y.ng-enter.ng-enter-active,
-.ng-trans-flip-y .ng-leave {
+.ng-trans-flip-y.ng-leave {
   opacity: 1;
   -webkit-transform: perspective(200px) rotateY(0deg);
   -ms-transform: perspective(200px) rotateY(0deg);
-  transform: perspective(200px) rotateY(0deg); }
+  transform: perspective(200px) rotateY(0deg);
+}
 .ng-trans-flip-y.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: perspective(200px) rotateY(90deg);
   -ms-transform: perspective(200px) rotateY(90deg);
-  transform: perspective(200px) rotateY(90deg); }
-
+  transform: perspective(200px) rotateY(90deg);
+}
 .ng-trans-rotate.ng-enter {
   opacity: 0;
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg); }
-.ng-trans-rotate.ng-enter.ng-enter-active, .ng-trans-rotate.ng-leave {
+  transform: rotate(-180deg);
+}
+.ng-trans-rotate.ng-enter.ng-enter-active,
+.ng-trans-rotate.ng-leave {
   opacity: 1;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
-  transform: rotate(0); }
+  transform: rotate(0);
+}
 .ng-trans-rotate.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg); }
-
-/* Ceaser CSS Easing Transitions [https://github.com/matthewlein/Ceaser] */
+  transform: rotate(-180deg);
+}
 /* transition timing functions */
 .easeInCubic.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -ms-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)';
+  -ms-transition-timing-function: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)';
+  transition-timing-function: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)';
+}
 .easeOutCubic.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  -ms-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
+}
 .easeInOutCubic.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  -ms-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)';
+}
 .easeInQuad.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -ms-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)';
+  -ms-transition-timing-function: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)';
+  transition-timing-function: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)';
+}
 .easeOutQuad.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+  -ms-transition-timing-function: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+  transition-timing-function: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+}
 .easeInOutQuad.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -ms-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)';
+  -ms-transition-timing-function: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)';
+  transition-timing-function: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)';
+}
 .easeInQuart.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
-  -ms-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
-  transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.895, 0.030, 0.685, 0.220)';
+  -ms-transition-timing-function: 'cubic-bezier(0.895, 0.030, 0.685, 0.220)';
+  transition-timing-function: 'cubic-bezier(0.895, 0.030, 0.685, 0.220)';
+}
 .easeOutQuart.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  -ms-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)';
+}
 .easeInOutQuart.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-  -ms-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)';
+}
 .easeInQuint.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  -ms-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.755, 0.050, 0.855, 0.060)';
+  -ms-transition-timing-function: 'cubic-bezier(0.755, 0.050, 0.855, 0.060)';
+  transition-timing-function: 'cubic-bezier(0.755, 0.050, 0.855, 0.060)';
+}
 .easeOutQuint.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  -ms-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.230, 1.000, 0.320, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.230, 1.000, 0.320, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.230, 1.000, 0.320, 1.000)';
+}
 .easeInOutQuint.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-  -ms-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.860, 0.000, 0.070, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.860, 0.000, 0.070, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.860, 0.000, 0.070, 1.000)';
+}
 .easeInSine.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
-  -ms-transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
-  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.470, 0.000, 0.745, 0.715)';
+  -ms-transition-timing-function: 'cubic-bezier(0.470, 0.000, 0.745, 0.715)';
+  transition-timing-function: 'cubic-bezier(0.470, 0.000, 0.745, 0.715)';
+}
 .easeOutSine.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-  -ms-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.390, 0.575, 0.565, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.390, 0.575, 0.565, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.390, 0.575, 0.565, 1.000)';
+}
 .easeInOutSine.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  -ms-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.445, 0.050, 0.550, 0.950)';
+  -ms-transition-timing-function: 'cubic-bezier(0.445, 0.050, 0.550, 0.950)';
+  transition-timing-function: 'cubic-bezier(0.445, 0.050, 0.550, 0.950)';
+}
 .easeInExpo.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-  -ms-transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-  transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.950, 0.050, 0.795, 0.035)';
+  -ms-transition-timing-function: 'cubic-bezier(0.950, 0.050, 0.795, 0.035)';
+  transition-timing-function: 'cubic-bezier(0.950, 0.050, 0.795, 0.035)';
+}
 .easeOutExpo.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  -ms-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.190, 1.000, 0.220, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.190, 1.000, 0.220, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.190, 1.000, 0.220, 1.000)';
+}
 .easeInOutExpo.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  -ms-transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  transition-timing-function: cubic-bezier(1, 0, 0, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(1.000, 0.000, 0.000, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(1.000, 0.000, 0.000, 1.000)';
+  transition-timing-function: 'cubic-bezier(1.000, 0.000, 0.000, 1.000)';
+}
 .easeInCirc.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-  -ms-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-  transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.600, 0.040, 0.980, 0.335)';
+  -ms-transition-timing-function: 'cubic-bezier(0.600, 0.040, 0.980, 0.335)';
+  transition-timing-function: 'cubic-bezier(0.600, 0.040, 0.980, 0.335)';
+}
 .easeOutCirc.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  -ms-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.075, 0.820, 0.165, 1.000)';
+  -ms-transition-timing-function: 'cubic-bezier(0.075, 0.820, 0.165, 1.000)';
+  transition-timing-function: 'cubic-bezier(0.075, 0.820, 0.165, 1.000)';
+}
 .easeInOutCirc.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -ms-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.785, 0.135, 0.150, 0.860)';
+  -ms-transition-timing-function: 'cubic-bezier(0.785, 0.135, 0.150, 0.860)';
+  transition-timing-function: 'cubic-bezier(0.785, 0.135, 0.150, 0.860)';
+}
 .easeInBack.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  -ms-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.600, -0.280, 0.735, 0.045)';
+  -ms-transition-timing-function: 'cubic-bezier(0.600, -0.280, 0.735, 0.045)';
+  transition-timing-function: 'cubic-bezier(0.600, -0.280, 0.735, 0.045)';
+}
 .easeOutBack.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-
+  -webkit-transition-timing-function: 'cubic-bezier(0.175,  0.885, 0.320, 1.275)';
+  -ms-transition-timing-function: 'cubic-bezier(0.175,  0.885, 0.320, 1.275)';
+  transition-timing-function: 'cubic-bezier(0.175,  0.885, 0.320, 1.275)';
+}
 .easeInOutBack.ng-trans {
-  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -ms-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  -webkit-transition-timing-function: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)';
+  -ms-transition-timing-function: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)';
+  transition-timing-function: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)';
+}

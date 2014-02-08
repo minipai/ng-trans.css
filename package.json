@@ -10,7 +10,9 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-connect": "~0.6.0",
     "gulp": "~3.4.0",
-    "gulp-connect": "~0.3.1"
+    "gulp-connect": "~0.3.1",
+    "stylus": "~0.42.2",
+    "gulp-stylus": "0.0.12"
   },
   "repository": {
     "type": "git",
