@@ -1,8 +1,8 @@
 /* transition property & duration */
 .ng-trans.ng-enter,
 .ng-trans.ng-leave {
-  -webkit-transition: 450ms all;
-  transition: 450ms all;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
 }
 /* transition types */
 .ng-trans-fade.ng-enter {

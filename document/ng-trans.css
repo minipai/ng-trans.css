@@ -1,9 +1,8 @@
-@import '/Users/Art/Sites/project/ng-trans.css/node_modules/gulp-stylus/node_modules/stylus/lib/functions';
 /* transition property & duration */
 .ng-trans.ng-enter,
 .ng-trans.ng-leave {
-  -webkit-transition: 450ms all;
-  transition: 450ms all;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
 }
 /* transition types */
 .ng-trans-fade.ng-enter {
@@ -170,9 +169,9 @@
 }
 .ng-trans-scale-up.ng-enter {
   opacity: 0;
-  -webkit-transform: scale(.64);
-  -ms-transform: scale(.64);
-  transform: scale(.64);
+  -webkit-transform: scale(0.64);
+  -ms-transform: scale(0.64);
+  transform: scale(0.64);
 }
 .ng-trans-scale-up.ng-enter.ng-enter-active,
 .ng-trans-scale-up.ng-leave {
@@ -183,9 +182,9 @@
 }
 .ng-trans-scale-up.ng-leave.ng-leave-active {
   opacity: 0;
-  -webkit-transform: scale(.64);
-  -ms-transform: scale(.64);
-  transform: scale(.64);
+  -webkit-transform: scale(0.64);
+  -ms-transform: scale(0.64);
+  transform: scale(0.64);
 }
 .ng-trans-scale-down.ng-enter {
   opacity: 0;
