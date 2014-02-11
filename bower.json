@@ -1,9 +1,19 @@
 {
   "name": "ng-trans-css",
   "version": "0.8.0",
-  "description": "Plug-and-play transition for AngularJS.",
   "main": "ng-trans.css",
+  "ignore": [
+        "document",
+        ".gitignore",
+        "bower.json",
+        "gulpfile.js",
+        "package.json",
+        "README.md"
+    ],
   "keywords": ["AngularJS", "transition", "css"],
+  "description": "Plug-and-play transition for AngularJS.",
   "author": "Art Pai <art@stylecoder.tw>",
   "homepage": "http://minipai.github.io/ng-trans.css/"
 }
+
+
