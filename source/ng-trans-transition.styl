@@ -1,250 +1,186 @@
 $default-property = all  ;
-$default-duration = 400ms;
+$default-duration = 250ms;
+
+$hide-class = '&.ng-enter, &.ng-leave.ng-leave-active, &.ng-hide-remove, &.ng-hide-add.ng-hide-add-active'
+$show-class = '&.ng-leave, &.ng-enter.ng-enter-active, &.ng-hide-remove.ng-hide-remove-active, &.ng-hide-add'
 
 // transition property & duration
 ng-trans($duration = $default-duration, $property = $default-property) {
-  &.ng-enter, &.ng-leave {
-    transition: $duration $property;
+  transition: $duration $property;
+
+  &.ng-hide-add, &.ng-hide-remove {
+    display:inherit!important;
   }
 }
 
 ng-trans-type($type) {
   // Fade Transition
   if $type == fade {
-    &.ng-enter {
+    {$hide-class} {
       opacity:0
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity:1
-    }
-    &.ng-leave.ng-leave-active {
-      opacity:0
     }
   }
 
   // Fade-left transition
   if $type == fade-left {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: translate(-40px, 0);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: translate(0, 0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: translate(-40px, 0);
     }
   }
 
   // Fade-up transition
   if $type == fade-up {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: translate(0, -40px);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: translate(0, 0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: translate(0, -40px);
     }
   }
 
   // Fade-right transition
   if $type == fade-right {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: translate(40px, 0);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: translate(0, 0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: translate(40px, 0);
     }
   }
 
   // Fade-down transition
   if $type == fade-down {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: translate(0, 40px);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: translate(0, 0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: translate(0, 40px);
     }
   }
 
   // Slide transition
   if $type == slide-left {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: translate(-100%, 0);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: translate(0, 0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: translate(-100%, 0);
     }
   }
 
 
   // Slide transition
   if $type == slide-up {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: translate(0, -800px);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: translate(0, 0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: translate(0, -800px);
     }
   }
 
   // Slide transition
   if $type == slide-right {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: translate(100%, 0);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: translate(0, 0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: translate(100%, 0);
     }
   }
 
 
   // Slide transition
   if $type == slide-down {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: translate(0, 800px);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: translate(0, 0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: translate(0, 800px);
     }
 
   }
 
   // Scale transition
   if $type == scale-up {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: scale(.64);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: scale(1);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: scale(.64);
     }
   }
 
   if $type == scale-down {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: scale(1.68);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: scale(1);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: scale(1.68);
     }
   }
 
 
   // Flip transition
   if $type == flip-x {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: perspective(400px) rotateX(90deg);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: perspective(400px) rotateX(0deg);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: perspective(400px) rotateX(90deg);
     }
   }
 
   // Flip transition
   if $type == flip-y {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: perspective(200px) rotateY(90deg);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave {
+    {$show-class} {
       opacity: 1;
       transform: perspective(200px) rotateY(0deg);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: perspective(200px) rotateY(90deg);
     }
   }
 
 
   // Rotate transition
   if $type == rotate {
-    &.ng-enter {
+    {$hide-class} {
       opacity: 0;
       transform: rotate(-180deg);
     }
-    &.ng-enter.ng-enter-active,
-    &.ng-leave{
+    {$show-class}{
       opacity: 1;
       transform: rotate(0);
-    }
-    &.ng-leave.ng-leave-active {
-      opacity: 0;
-      transform: rotate(-180deg);
     }
   }
 }
