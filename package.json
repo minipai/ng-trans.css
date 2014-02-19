@@ -3,13 +3,15 @@
   "version": "0.8.0",
   "description": "Plug-and-play transition for AngularJS.",
   "main": "ng-trans.css",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "stylus": "~0.42.2",
     "gulp": "~3.4.0",
     "gulp-connect": "~0.3.1",
     "gulp-stylus": "0.0.12",
-    "gulp-autoprefixer": "0.0.6"
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-plumber": "~0.5.6"
   },
   "repository": {
     "type": "git",
