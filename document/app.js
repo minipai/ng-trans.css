@@ -65,8 +65,7 @@ App.controller('TransDemo', function(transitions, $scope, $timeout) {
 
 App.directive('demoTrans', function() {
   return {
-    template: "<button class=\"btn btn-primary\"\n        ng-class=\"{active: isCurrent()}\"\n        ng-click=\"demo()\">{{ trans }}</button>",
-    replace: true,
+
     scope: true,
     restrict: 'A',
     link: function(scope, element, attrs) {

@@ -107,37 +107,43 @@
       <h2>Demo</h2>
       <p>Select a trasition.</p>
 
-
-      <p class="btn-list text-center">
-        <button class="btn btn-primary btn-lg" demo-trans="fade"       ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="fade-left"  ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="fade-up"    ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="fade-right" ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="fade-down"  ></button>
-
-      <p class="btn-list text-center">
-        <button class="btn btn-primary btn-lg" demo-trans="slide-left" ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="slide-up"   ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="slide-right"></button>
-        <button class="btn btn-primary btn-lg" demo-trans="slide-down" ></button>
-      <p class="btn-list text-center">
-        <button class="btn btn-primary btn-lg" demo-trans="scale-up"   ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="scale-down" ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="flip-x"     ></button>
-        <button class="btn btn-primary btn-lg" demo-trans="flip-y"     ></button>
-
-
+      <div>
+        <ul class="demo-trans-list">
+          <li class="" demo-trans="fade"        ng-click="demo()">fade</li>
+        </ul>
+        <ul class="demo-trans-list clear">
+          <li class="" demo-trans="fade-left"   ng-click="demo()">fade-left</li>
+          <li class="" demo-trans="fade-up"     ng-click="demo()">fade-up</li>
+          <li class="" demo-trans="fade-right"  ng-click="demo()">fade-right</li>
+          <li class="" demo-trans="fade-down"   ng-click="demo()">fade-down</li>
+        </ul>
+        <ul class="demo-trans-list">
+          <li class="" demo-trans="slide-left"   ng-click="demo()">slide-left</li>
+          <li class="" demo-trans="slide-up"     ng-click="demo()">slide-up</li>
+          <li class="" demo-trans="slide-right"  ng-click="demo()">slide-right</li>
+          <li class="" demo-trans="slide-down"   ng-click="demo()">slide-down</li>
+        </ul>
+        <ul class="demo-trans-list">
+          <li class="" demo-trans="scale-up"     ng-click="demo()">scale-up</li>
+          <li class="" demo-trans="scale-down"   ng-click="demo()">scale-down</li>
+          <li class="" demo-trans="flip-x"       ng-click="demo()">flip-x</li>
+          <li class="" demo-trans="flip-y"       ng-click="demo()">flip-y</li>
+        </ul>
+        <div class="clear"></div>
+      </div>
 
       <br>
+      <div class="clear"></div>
+      <p class="text-center"><button class="btn btn-danger" ng-click="reset()">Clear List</button></p>
 
-      <ul class="list-group">
-        <li class="list-group-item"><button class="btn btn-danger" ng-click="reset()">Clear List</button></li>
-        <li class="list-group-item"
+      <div class="demo-list">
+        <div class="demo-list-item"
             ng-repeat="item in data"
             ng-class="'ng-trans ng-trans-'+item.type+' '+item.timing" >
-          <b class="remove-x" ng-click="remove($index)">&times;</b> {{ item.type }} {{item.timing}}
-        </li>
-      </ul>
+        </div>
+        <div class="clear"></div>
+
+      </div>
 
     </div>
 
