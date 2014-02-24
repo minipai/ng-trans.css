@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,700);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+
 html, body {
   width: 100%;
   height: 100%;
@@ -5,8 +8,16 @@ html, body {
 }
 
 body {
-  background: #FEF9CD;
-  font-family: sans-serif;
+  font-family:  'Source Code Pro', sans-serif;
+  color: #A57700;
+  font-size: 18px;
+  margin: 0;
+}
+a {
+  color: #A87700;
+}
+a:hover {
+  color: #cc0000;
 }
 
 b {
@@ -17,10 +28,42 @@ pre {
   color: #666;
 }
 
-h4 {
-  color: #898b0e;
-  border-left: 12px solid #9c9e10;
-  padding: 0 0 0 10px;
+code {
+  color: #843007;
+  background-color: #F4EDDB;
+  padding: 4px 6px;
+}
+
+th, td {
+  padding: 5px 10px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lato', sans-serif;
+
+}
+h2 {
+  font-size: 36px;
+  color: #A87700;
+  margin: 2em 0 1em;
+  text-align: center;
+
+}
+h2:before {
+  content: '#';
+  color: #979465;
+  font-size: 0.8em;
+  margin-right: 0.6em;
+  margin-left: -0.8em;
+}
+
+p {
+  line-height: 1.8;
+}
+.container {
+  max-width: 720px;
+  padding: 1em;
+  margin: 0 auto;
 }
 
 #demo {
@@ -40,38 +83,63 @@ h4 {
 }
 
 #main {
-  position: absolute;
-  left: 0;
-  right: 240px;
-  top: 0;
-  bottom: 0;
-  overflow: auto;
-  padding: 0 40px;
-  background: #FEF9CD;
-  color: #7b5704;
+  background-color: #FDF6E3;
+}
+
+.menu {
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+  padding: 1em;
+  margin-bottom: -1px;
+}
+.menu a {
+  width: 6em;
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
 }
 
 #header {
   padding: 1px 0 10px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #C0C314;
+  background-color: #979465;
+  color: #FFF;
+  box-shadow: 3px -10px 20px 0 rgba(0,0,0,0.1) inset;
 }
 #header h1 {
-  color: #65660b;
+  padding: 100px 0 0;
+  font-size: 96px;
+  text-align: center;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  font-weight: normal;
+  margin: 0;
 }
-#header h1 small {
-  color: #92950f;
+#header small {
+  color: #FFF;
+  opacity: 0.5;
 }
+  .slogan {
+    font-size: 36px;
+    text-align: center;
+    font-family: Lato;
+    color: #74724e;
+    margin: 0 0 100px;
+  }
+
+
 #header .download-button {
   margin-top: 13px;
 }
 
 #footer {
-  padding: 1em 0 0.5em;
-  margin: 1em 0 0;
+/*  background-color: #56543a;
+  color: #fff;
+
+*/
+  font-size: 15px;
+  color: #999;
 }
 #footer a {
-  color: #0a0a01;
+  color: #8E8B5F;
 }
 
 .btn-primary {
@@ -89,6 +157,9 @@ h4 {
 .btn-list {
   line-height: 2.7em;
 }
+.btn-list .btn {
+  width: 15%;
+}
 
 .css-code {
   height: 30em;
@@ -103,4 +174,9 @@ h4 {
 }
 .remove-x:hover {
   opacity: 1;
+}
+
+
+.panel {
+  background-color: rgba(255,255,255, 0.5);
 }

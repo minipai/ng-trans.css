@@ -3,20 +3,15 @@
   <head>
     <meta charset="utf-8">
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-
-    <!-- Use title if it's in the page YAML frontmatter -->
     <title>ng-trans.css - plug-and-play transition for AngularJS</title>
 
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="ng-trans.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="index" ng-controller="TransDemo">
-    <div id="demo">
-      <h4>Demo</h4>
+<!--     <div id="demo">
+      <h2>Demo</h2>
       <ul class="list-group">
         <li class="list-group-item"><button class="btn btn-danger" ng-click="reset()">Clear List</button></li>
         <li class="list-group-item"
@@ -26,115 +21,111 @@
         </li>
       </ul>
     </div>
-
+ -->
 
     <div id="main">
-
-      <div class="container">
         <div id="header" class="clearfix">
-              <h1 class="pull-left">ng-trans.css <small>plug-and-play transition for AngularJS</small></h1>
-              <p></p>
-              <p class="pull-right"><a href="ng-trans.css" class="btn btn-primary btn-lg download-button">Download</a></p>
+              <h1>ng - trans<small>.css</small></h1>
+              <p class="slogan">easy transitions for AngularJS</p>
+
+        </div>
+        <div class="menu panel">
+            <a href="ng-trans.css">Demo</a> &amp;
+            <a href="ng-trans.css">Github</a>
+
         </div>
 
-        <div class="row">
-          <div class="l col-md-12">
-            <h4><span>Try it</span></h4>
-            <p>Select a trasition.</p>
+        <div class="container">
+          <div class="row">
+            <div class="">
+              <h2>About</h2>
+              <p>
+              ng-trans.css let you easyly add transitions for   AngularJS(1.2+) with ngAnimate.
 
-            <p class="btn-list">
-              <button class="btn btn-primary" demo-trans="all"       ></button>
+              <p>ng-trans.css works with directives includes <code>ngRepeat</code>, <code>ngInclude</code>, <code>ngIf</code>, <code>ngView</code>, <code>ngShow</code> and <code>ngHide</code>.
+              <br>
 
-            <p class="btn-list">
-              <button class="btn btn-primary" demo-trans="fade"       ></button>
-              <button class="btn btn-primary" demo-trans="fade-left"  ></button>
-              <button class="btn btn-primary" demo-trans="fade-up"    ></button>
-              <button class="btn btn-primary" demo-trans="fade-right" ></button>
-              <button class="btn btn-primary" demo-trans="fade-down"  ></button>
+            </div>
+            <div class="">
 
-            <p class="btn-list">
-              <button class="btn btn-primary" demo-trans="slide-left" ></button>
-              <button class="btn btn-primary" demo-trans="slide-up"   ></button>
-              <button class="btn btn-primary" demo-trans="slide-right"></button>
-              <button class="btn btn-primary" demo-trans="slide-down" ></button>
+              <h2>Download</h2>
+              <table>
+                <tr>
+                  <th>Bower</th>
+                  <td>
+                    <code>bower install ng-trans-css</code>
+                  </td>
+                </tr>
+                <tr>
+                  <th>File</th>
+                  <td>
+                    <a href="ng-trans.css">ng-trans.css</a> or
+                    <a href="ng-trans.min.css">ng-trans.min.css</a>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <br>
+            </div>
 
-            <p class="btn-list">
-              <button class="btn btn-primary" demo-trans="scale-up"   ></button>
-              <button class="btn btn-primary" demo-trans="scale-down" ></button>
-              <button class="btn btn-primary" demo-trans="flip-x"     ></button>
-              <button class="btn btn-primary" demo-trans="flip-y"     ></button>
-              <button class="btn btn-primary" demo-trans="rotate"     ></button>
-
-            <p>Select a timing function.</p>
-            <p class="btn-list">
-              <button class="btn btn-primary" demo-timing="None"></button>
-              <button class="btn btn-primary" demo-timing="easeIns"  ></button>
-              <button class="btn btn-primary" demo-timing="easeOuts"  ></button>
-              <button class="btn btn-primary" demo-timing="easeInOuts"  ></button>
-            <p class="btn-list">
-              <button class="btn btn-primary" demo-timing="easeInQuad"  ></button>
-              <button class="btn btn-primary" demo-timing="easeInCubic" ></button>
-              <button class="btn btn-primary" demo-timing="easeInQuart" ></button>
-              <button class="btn btn-primary" demo-timing="easeInQuint" ></button>
-              <button class="btn btn-primary" demo-timing="easeInSine"  ></button>
-              <button class="btn btn-primary" demo-timing="easeInExpo"  ></button>
-              <button class="btn btn-primary" demo-timing="easeInCirc"  ></button>
-              <button class="btn btn-primary" demo-timing="easeInBack"  ></button>
-            <p class="btn-list">
-              <button class="btn btn-primary" demo-timing="easeOutQuad" ></button>
-              <button class="btn btn-primary" demo-timing="easeOutCubic"></button>
-              <button class="btn btn-primary" demo-timing="easeOutQuart"></button>
-              <button class="btn btn-primary" demo-timing="easeOutQuint"></button>
-              <button class="btn btn-primary" demo-timing="easeOutSine" ></button>
-              <button class="btn btn-primary" demo-timing="easeOutExpo"  ></button>
-              <button class="btn btn-primary" demo-timing="easeOutCirc" ></button>
-              <button class="btn btn-primary" demo-timing="easeOutBack" ></button>
-            <p class="btn-list">
-              <button class="btn btn-primary" demo-timing="easeInOutQuad" ></button>
-              <button class="btn btn-primary" demo-timing="easeInOutCubic"></button>
-              <button class="btn btn-primary" demo-timing="easeInOutQuart"></button>
-              <button class="btn btn-primary" demo-timing="easeInOutQuint"></button>
-              <button class="btn btn-primary" demo-timing="easeInOutSine" ></button>
-              <button class="btn btn-primary" demo-timing="easeInOutExpo" ></button>
-              <button class="btn btn-primary" demo-timing="easeInOutCirc" ></button>
-              <button class="btn btn-primary" demo-timing="easeInOutBack" ></button>
-
-           </div>
-          <br>
-          <div class="col-md-12">
-            <h4>Install</h4>
-            <p>Use <a href="http://bower.io">bower</a> to install: <code>bower install ng-trans-css</code>, or <a href="ng-trans.css">download</a>.</p>
-            <br>
-            <h4>Usage</h4>
-            <ol>
-              <li>Link your webpage to ng-trans.css</li>
-              <li ng-non-bindable>Add class <b>ng-trans ng-trans-{{transType}}</b> to your the element of ng-repeat to make transition work.</li>
-              <li ng-non-bindable>In addition, you can add class <b>{{timingFunction}}</b> to set timing fcuntion. (<b>easeOutBack</b> will bounce!)</li>
-            </ol>
-            <pre>
-              <code>
-      &lt;ul class=&quot;list-group&quot;&gt;
-        &lt;li class=&quot;list-group-item ng-trans ng-trans-<b>{{transType}}</b> <b>{{timingFunction}}</b>&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
-      &lt;/ul&gt;
-              </code>
-            </pre>
-            <br>
-            <h4>CSS</h4>
-            <pre class="css-code">
-              <code ng-include src=" 'ng-trans.css' "></code>
-
-            </pre>
           </div>
-        </div><!-- .welcome -->
+        </div>
+
+ <!--      <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <br>
+
+              <h2>Requirements</h2>
+
+              <p>You need AngularJS 1.2 with ngAnimate.</p>
+
+              <p>ng-trans.css works with directives that will add .ng-leave, .ng-leave-active, .ng-enter and .ng-enter-active CSS classes. This includes ngRepeat, ngInclude, ngIf, ngView.</p>
+              <br>
+              <h2>Usage</h2>
+              <ol>
+                <li>Link your webpage to ng-trans.css</li>
+                <li ng-non-bindable>Add class <b>ng-trans ng-trans-{{transType}}</b> to your the element of ng-repeat to make transition work.</li>
+                <li ng-non-bindable>In addition, you can add class <b>{{timingFunction}}</b> to set timing fcuntion. (<b>easeOutBack</b> will bounce!)</li>
+              </ol>
+              <pre>
+                <code>
+        &lt;ul class=&quot;list-group&quot;&gt;
+          &lt;li class=&quot;list-group-item ng-trans ng-trans-<b>{{transType}}</b> <b>{{timingFunction}}</b>&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
+        &lt;/ul&gt;
+                </code>
+              </pre>
+
+            </div>
+            <div class="col-md-4">
+              <br>
+              <br>
+              <div class="panel">
+                <div class="panel-body">
+                <p>ng-trans works with ngAnimate</p>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+            <br>
+
+          </div>
+        </div>
 
 
-        <div id="footer">
+ -->
+        <div id="footer" class="panel">
+          <div class="container">
             <p>
-              A style coded by <a href="http://twitter.com/minipai">Art Pai</a>
+              Project by Art Pai
               &nbsp;&bull;&nbsp;
-              View on <a href="https://github.com/minipai/ng-trans.css">Github</a>
-
+              <a href="http://twitter.com/minipai">@minipai</a>
             </p>
+
+          </div>
 
         </div>
 
@@ -149,3 +140,30 @@
 
   </body>
 </html>
+
+
+
+<!-- <h2><span>Try it</span></h2>
+        <p>Select a trasition.</p>
+
+
+        <p class="btn-list text-center">
+          <button class="btn btn-primary btn-lg" demo-trans="fade"       ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="fade-left"  ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="fade-up"    ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="fade-right" ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="fade-down"  ></button>
+
+        <p class="btn-list text-center">
+          <button class="btn btn-primary btn-lg" demo-trans="slide-left" ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="slide-up"   ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="slide-right"></button>
+          <button class="btn btn-primary btn-lg" demo-trans="slide-down" ></button>
+        <p class="btn-list text-center">
+          <button class="btn btn-primary btn-lg" demo-trans="scale-up"   ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="scale-down" ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="flip-x"     ></button>
+          <button class="btn btn-primary btn-lg" demo-trans="flip-y"     ></button>
+
+
+          <br> -->
