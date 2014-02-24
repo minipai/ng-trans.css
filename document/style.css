@@ -69,44 +69,13 @@ h2:before {
 p {
   line-height: 1.8;
 }
+
 .container {
   max-width: 720px;
   padding: 0.5px 1em;
   margin: 0 auto;
 }
 
-#demo {
-  position: absolute;
-  background-color: #FBD783;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 240px;
-  overflow: hidden;
-}
-#demo .list-group {
-  margin: 10px;
-}
-#demo li {
-  background-color: #FDEFCD;
-}
-
-#main {
-  background-color: #FDF6E3;
-}
-
-.menu {
-  text-align: center;
-  background-color: rgba(255,255,255,0.5);
-  padding: 1em;
-  margin-bottom: -1px;
-}
-.menu a {
-  width: 6em;
-  display: inline-block;
-  text-align: center;
-  font-size: 24px;
-}
 
 #header {
   padding: 1px 0 10px;
@@ -135,25 +104,39 @@ p {
   }
 
 
-#header .download-button {
-  margin-top: 13px;
+#main {
+  background-color: #FDF6E3;
 }
+  .menu {
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+    padding: 1em;
+    margin-bottom: -1px;
+  }
+  .menu a {
+    width: 6em;
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+  }
 
 #footer {
-/*  background-color: #56543a;
-  color: #fff;
-
-*/
+  margin-top: 50px;
   font-size: 15px;
   color: #999;
 }
-#footer a {
-  color: #8E8B5F;
+
+
+#demo {
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  overflow: hidden;
+  background-color: rgba(255,255,255, 0.9);
 }
-
-
-
-
 
 
 .btn-primary {

@@ -4,72 +4,57 @@
     <meta charset="utf-8">
 
     <title>ng-trans.css - plug-and-play transition for AngularJS</title>
+    <meta name="description" content="ng-trans.css let you easily add transitions for AngularJS with ngAnimate.">
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="ng-trans.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="ng-trans.css" rel="stylesheet" type="text/css">
   </head>
 
   <body class="index" ng-controller="TransDemo">
-<!--     <div id="demo">
-      <h2>Demo</h2>
-      <ul class="list-group">
-        <li class="list-group-item"><button class="btn btn-danger" ng-click="reset()">Clear List</button></li>
-        <li class="list-group-item"
-            ng-repeat="item in data"
-            ng-class="'ng-trans ng-trans-'+item.type+' '+item.timing" >
-          <b class="remove-x" ng-click="remove($index)">&times;</b> {{ item.type }} {{item.timing}}
-        </li>
-      </ul>
-    </div>
- -->
 
     <div id="main">
-        <div id="header" class="clearfix">
-              <h1>ng - trans<small>.css</small></h1>
-              <p class="slogan">easy transitions for AngularJS</p>
+      <div id="header" class="clearfix">
+        <h1>ng - trans<small>.css</small></h1>
+        <p class="slogan">easy transitions for AngularJS</p>
 
-        </div>
-        <div class="menu panel">
-            <a href="ng-trans.css">Demo</a> &amp;
-            <a href="ng-trans.css">Github</a>
-
-        </div>
-
+      </div>
+      <div class="menu panel">
+          <a href="ng-trans.css">Demo</a> &amp;
+          <a href="https://github.com/minipai/ng-trans.css">Github</a>
+      </div>
+      <div id="main">
         <div class="container">
-          <div class="row">
-            <div class="">
-              <h2>About</h2>
-              <p>
-              <b>ng-trans.css</b> let you easily add transitions for AngularJS(1.2+) with ngAnimate.
+          <h2>About</h2>
+          <p><b>ng-trans.css</b> let you easily add transitions for AngularJS(1.2+) with ngAnimate.</p>
 
-              <p>ng-trans.css works with directives include <code>ngRepeat</code>, <code>ngInclude</code>, <code>ngIf</code>, <code>ngView</code>, <code>ngShow</code> and <code>ngHide</code>.
-              <br>
+          <p>ng-trans.css works with directives include <code>ngRepeat</code>, <code>ngInclude</code>, <code>ngIf</code>, <code>ngView</code>, <code>ngShow</code> and <code>ngHide</code>.</p>
 
-            </div>
-            <div class="">
-
-              <h2>Download</h2>
-              <table>
-                <tr>
-                  <th>Bower</th>
-                  <td>
-                    <code>bower install ng-trans-css</code>
-                  </td>
-                </tr>
-                <tr>
-                  <th>File</th>
-                  <td>
-                    <a href="ng-trans.css">ng-trans.css</a> or
-                    <a href="ng-trans.min.css">ng-trans.min.css</a>
-                  </td>
-                </tr>
-              </table>
-              <br>
-              <br>
-            </div>
-
-          </div>
+          <h2>Download</h2>
+          <table>
+            <tr>
+              <th>Bower</th>
+              <td>
+                <code>bower install ng-trans-css</code>
+              </td>
+            </tr>
+            <tr>
+              <th>File</th>
+              <td>
+                <a href="ng-trans.css">ng-trans.css</a> or
+                <a href="ng-trans.min.css">ng-trans.min.css</a>
+              </td>
+            </tr>
+          </table>
         </div>
+      </div>
+      <div id="footer" class="panel">
+        <div class="container">
+          <p>
+            Project by Art Pai - <a href="http://twitter.com/minipai">@minipai</a>
+          </p>
+        </div>
+      </div>
+    </div>
 
  <!--      <div class="container">
           <div class="row">
@@ -117,53 +102,47 @@
 
 
  -->
-        <div id="footer" class="panel">
-          <div class="container">
-            <p>
-              Project by Art Pai
-              -
-              <a href="http://twitter.com/minipai">@minipai</a>
-            </p>
 
-          </div>
-
-        </div>
+    <div id="demo">
+      <h2>Demo</h2>
+      <p>Select a trasition.</p>
 
 
+      <p class="btn-list text-center">
+        <button class="btn btn-primary btn-lg" demo-trans="fade"       ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="fade-left"  ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="fade-up"    ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="fade-right" ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="fade-down"  ></button>
 
-      </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js" type="text/javascript"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-animate.min.js" type="text/javascript"></script>
-  <script src="app.js" type="text/javascript"></script>
+      <p class="btn-list text-center">
+        <button class="btn btn-primary btn-lg" demo-trans="slide-left" ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="slide-up"   ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="slide-right"></button>
+        <button class="btn btn-primary btn-lg" demo-trans="slide-down" ></button>
+      <p class="btn-list text-center">
+        <button class="btn btn-primary btn-lg" demo-trans="scale-up"   ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="scale-down" ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="flip-x"     ></button>
+        <button class="btn btn-primary btn-lg" demo-trans="flip-y"     ></button>
 
 
+
+      <br>
+
+      <ul class="list-group">
+        <li class="list-group-item"><button class="btn btn-danger" ng-click="reset()">Clear List</button></li>
+        <li class="list-group-item"
+            ng-repeat="item in data"
+            ng-class="'ng-trans ng-trans-'+item.type+' '+item.timing" >
+          <b class="remove-x" ng-click="remove($index)">&times;</b> {{ item.type }} {{item.timing}}
+        </li>
+      </ul>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-animate.min.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
   </body>
 </html>
-
-
-
-<!-- <h2><span>Try it</span></h2>
-        <p>Select a trasition.</p>
-
-
-        <p class="btn-list text-center">
-          <button class="btn btn-primary btn-lg" demo-trans="fade"       ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="fade-left"  ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="fade-up"    ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="fade-right" ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="fade-down"  ></button>
-
-        <p class="btn-list text-center">
-          <button class="btn btn-primary btn-lg" demo-trans="slide-left" ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="slide-up"   ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="slide-right"></button>
-          <button class="btn btn-primary btn-lg" demo-trans="slide-down" ></button>
-        <p class="btn-list text-center">
-          <button class="btn btn-primary btn-lg" demo-trans="scale-up"   ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="scale-down" ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="flip-x"     ></button>
-          <button class="btn btn-primary btn-lg" demo-trans="flip-y"     ></button>
-
-
-          <br> -->
