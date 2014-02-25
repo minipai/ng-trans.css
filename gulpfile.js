@@ -1,8 +1,10 @@
+var connect = require('connect')
+var open    = require("open")
+
 var gulp    = require('gulp')
-var connect = require('gulp-connect')
 var stylus  = require('gulp-stylus')
-var prefix  = require('gulp-autoprefixer');
-var plumber = require('gulp-plumber');
+var prefix  = require('gulp-autoprefixer')
+var plumber = require('gulp-plumber')
 
 var compileStylus = function(src) {
   gulp.src(src)
@@ -13,12 +15,14 @@ var compileStylus = function(src) {
       .pipe(gulp.dest('document/'));
 };
 
-gulp.task('connect', connect.server({
-  root: __dirname + '/document',
-  port: 1337,
-  open: { browser: 'Google Chrome'},
-  })
-);
+gulp.task('connect', function() {
+  connect.createServer(
+    connect.static(__dirname + '/document')
+  ).listen(8080);
+
+  open("http://0.0.0.0:8080", "Google Chrome");
+
+});
 
 gulp.task('stylus', function() {
   compileStylus('./source/ng-trans.styl');
