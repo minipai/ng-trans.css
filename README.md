@@ -27,32 +27,6 @@ You only need to add class `ng-trans ng-trans-{{transType}} {{timingFuntion}}` t
 - **ng-trans-transitions.css** contains all transitions.
 - **ng-trans-timing-function.css** contains all timing functions.
 
-## Sass support
-
-If you want to apply transitions with your own selector, include @minxins in **_ng-trans-transition.scss** (in /source).
-
-```
-@import "ng-trans-transition.scss";
-
-$trans-duration: 400ms; // default duration time
-
-.your-selector {
-  @include ng-trans(); // if will use 400ms
-  @include ng-trans-type( transType );
-}
-
-.your-selector {
-  @include ng-trans(500ms);
-  @include ng-trans-type( transType );
-}
-
-```
-- `$trans-duration` sets the default duration time of transition. E.g. `500ms`, `1s`.
-- `@include ng-trans( $duration )` is required. transition-property and transition-duration is setted here;
-- `@include ng-trans-type( transType )`  where transType may be one of the transition in the list below.
-
-For mixins of timimg funcitons, checkout [matthewlein / Ceaser](https://github.com/matthewlein/Ceaser/tree/master/developer) or [jhardy / compass-ceaser-easing](https://github.com/jhardy/compass-ceaser-easing).
-
 
 ## List of transitions ({{transType}})
 
