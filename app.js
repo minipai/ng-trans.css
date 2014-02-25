@@ -1,125 +1,69 @@
 window.App = angular.module('App', ['ngAnimate']);
 
 App.controller('TransDemo', function(transitions, $scope, $timeout) {
-  var mockList, pushDemo, timeouts;
-  $scope.limit = 3;
+  var pushDemo, timeout;
+
+  $scope.demoMode  = false;
   $scope.transType = 'fade';
-  $scope.timingFunction = '';
-  $scope.data = mockList = [];
-  timeouts = [];
+  $scope.data = [];
+
   pushDemo = function() {
-    return $scope.data.push({
+    $scope.data.push({
       type: $scope.transType,
-      timing: $scope.timingFunction
     });
   };
-  $scope.reset = function() {
-    angular.forEach(timeouts, function(timeout) {
-      return $timeout.cancel(timeout);
-    });
-    return $scope.data.length = 0;
+
+  $scope.showDemo = function ($event) {
+    $event.preventDefault();
+    $event.stopPropagation();
+    $scope.demoMode = true;
+  }
+  $scope.exitDemo = function () {
+    $scope.demoMode = false;
+  }
+
+  $scope.selected = function(trans) {
+    return $scope.transType === trans;
   };
-  $scope.demoTrans = function(transType) {
-    $scope.transType = transType;
-    return pushDemo();
-  };
-  $scope.demoTiming = function(timingFunction) {
-    $scope.timingFunction = timingFunction;
-    return pushDemo();
-  };
-  $scope.transClass = function() {
-    if ($scope.transType) {
-      return "ng-trans ng-trans-" + $scope.transType + " " + $scope.timingFunction;
+
+  $scope.demo = function(trans) {
+    $timeout.cancel(timeout);
+    $scope.transType = trans
+
+    var i = 0
+
+    var timeoutDemo = function(){
+      i = i + 1
+      timeout = $timeout(function(){
+        $scope.add(trans)
+          if( i < 5) {
+            timeoutDemo()
+          } else {
+            // $scope.reset()
+          }
+      }, 200)
     }
+    timeoutDemo()
   };
+
+  $scope.add = function(transType) {
+    if(transType) {
+      $scope.transType = transType;
+    }
+    pushDemo();
+  };
+
   $scope.remove = function(index) {
-    return $scope.data.splice(index, 1);
+    $scope.data.splice(index, 1);
   };
-  $scope.demoAllTrans = function() {
-    var i;
-    i = 0;
-    $scope.reset();
-    return angular.forEach(transitions, function(trans) {
-      var t;
-      i = i + 400;
-      t = $timeout((function() {
-        return $scope.demoTrans(trans);
-      }), i);
-      return timeouts.push(t);
-    });
+
+  $scope.reset = function() {
+    $timeout.cancel(timeout);
+    $scope.data.length = 0;
   };
-  return $scope.demoAllTiming = function(timings) {
-    var i;
-    i = 0;
-    $scope.reset();
-    return angular.forEach(timings, function(timing) {
-      var t;
-      i = i + 800;
-      t = $timeout((function() {
-        return $scope.demoTiming(timing);
-      }), i);
-      return timeouts.push(t);
-    });
-  };
+
 });
 
-App.directive('demoTrans', function() {
-  return {
-    template: "<button class=\"btn btn-primary\"\n        ng-class=\"{active: isCurrent()}\"\n        ng-click=\"demo()\">{{ trans }}</button>",
-    replace: true,
-    scope: true,
-    restrict: 'A',
-    link: function(scope, element, attrs) {
-      var blur, trans;
-      trans = scope.trans = attrs.demoTrans;
-      blur = function() {
-        return element[0].blur();
-      };
-      scope.isCurrent = function() {
-        return scope.transType === trans;
-      };
-      return scope.demo = function() {
-        if (trans === 'all') {
-          scope.demoAllTrans();
-        } else {
-          scope.demoTrans(trans);
-        }
-        return blur();
-      };
-    }
-  };
-});
-
-App.directive('demoTiming', function(easeIns, easeOuts, easeInOuts) {
-  return {
-    template: "<button class=\"btn btn-primary\"\n        ng-class=\"{active: isCurrent()}\"\n        ng-click=\"demo()\">{{ timing }}</button>",
-    replace: true,
-    scope: true,
-    restrict: 'A',
-    link: function(scope, element, attrs) {
-      var blur, timing;
-      timing = scope.timing = attrs.demoTiming;
-      blur = function() {
-        return element[0].blur();
-      };
-      scope.isCurrent = function() {
-        return scope.timingFunction === timing;
-      };
-      return scope.demo = function() {
-        if (timing === 'easeIns') {
-          scope.demoAllTiming(easeIns);
-        } else if (timing === 'easeOuts') {
-          scope.demoAllTiming(easeOuts);
-        } else if (timing === 'easeInOuts') {
-          scope.demoAllTiming(easeInOuts);
-        } else {
-          scope.demoTiming(timing);
-        }
-        return blur();
-      };
-    }
-  };
-});
 
 App.value('transitions', ['fade', 'fade-left', 'fade-up', 'fade-right', 'fade-down', 'slide-left', 'slide-up', 'slide-right', 'slide-down', 'scale-up', 'scale-down', 'flip-x', 'flip-y', 'rotate']);
 
