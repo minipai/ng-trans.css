@@ -10,50 +10,51 @@
     <link href="ng-trans.css" rel="stylesheet" type="text/css">
   </head>
 
-  <body class="index" ng-controller="TransDemo">
+  <body class="index" ng-class="{'demo-on': demoMode}" ng-controller="TransDemo">
+    <div ng-click="exitDemo()">
+      <div id="header" class="clearfix">
+        <h1>ng - trans<small>.css</small></h1>
+        <p class="slogan">easy transitions for AngularJS</p>
+      </div>
+      <div class="menu panel">
+          <a href="#demo" ng-click="showDemo($event)">Demo</a>
+          &amp;
+          <a href="https://github.com/minipai/ng-trans.css">Github</a>
+      </div>
+      <div id="main">
+        <div class="container">
+          <h2>About</h2>
+          <p><b>ng-trans.css</b> let you easily add transitions for AngularJS(1.2+) with ngAnimate.</p>
 
-    <div id="header" class="clearfix">
-      <h1>ng - trans<small>.css</small></h1>
-      <p class="slogan">easy transitions for AngularJS</p>
-    </div>
-    <div class="menu panel">
-        <a href="ng-trans.css">Demo</a> &amp;
-        <a href="https://github.com/minipai/ng-trans.css">Github</a>
-    </div>
-    <div id="main">
-      <div class="container">
-        <h2>About</h2>
-        <p><b>ng-trans.css</b> let you easily add transitions for AngularJS(1.2+) with ngAnimate.</p>
+          <p>ng-trans.css works with directives include <code>ngRepeat</code>, <code>ngInclude</code>, <code>ngIf</code>, <code>ngView</code>, <code>ngShow</code> and <code>ngHide</code>.</p>
 
-        <p>ng-trans.css works with directives include <code>ngRepeat</code>, <code>ngInclude</code>, <code>ngIf</code>, <code>ngView</code>, <code>ngShow</code> and <code>ngHide</code>.</p>
-
-        <h2>Download</h2>
-        <table>
-          <tr>
-            <th>Bower</th>
-            <td>
-              <code>bower install ng-trans-css</code>
-            </td>
-          </tr>
-          <tr>
-            <th>File</th>
-            <td>
-              <a href="ng-trans.css">ng-trans.css</a> or
-              <a href="ng-trans.min.css">ng-trans.min.css</a>
-            </td>
-          </tr>
-        </table>
+          <h2>Download</h2>
+          <table>
+            <tr>
+              <th>Bower</th>
+              <td>
+                <code>bower install ng-trans-css</code>
+              </td>
+            </tr>
+            <tr>
+              <th>File</th>
+              <td>
+                <a href="ng-trans.css">ng-trans.css</a> or
+                <a href="ng-trans.min.css">ng-trans.min.css</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="footer" class="panel">
+        <div class="container">
+          <p>
+            Project by Art Pai - <a href="http://twitter.com/minipai">@minipai</a>
+          </p>
+        </div>
       </div>
     </div>
-    <div id="footer" class="panel">
-      <div class="container">
-        <p>
-          Project by Art Pai - <a href="http://twitter.com/minipai">@minipai</a>
-        </p>
-      </div>
-    </div>
-
-    <div id="demo">
+    <div id="demo" class="ng-hide ng-trans ng-trans-scale-up" ng-show="demoMode">
       <h2>Demo</h2>
 
       <div class="demo-select">
@@ -93,7 +94,7 @@
       <div class="demo-list">
         <p class="text-center demo-actions">
           <b ng-click="add()">+</b>
-          <b ng-click="remove(data.length-1)">-</b>
+          <b ng-click="remove(0)">-</b>
           <b ng-click="reset()">&times;</b>
         </p>
         <div class="demo-list-item"

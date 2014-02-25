@@ -1,4 +1,4 @@
-@import url('chttp://fonts.googleapis.com/css?family=Lato:100,700');
+@import url('http://fonts.googleapis.com/css?family=Lato:100,700');
 @import url('http://fonts.googleapis.com/css?family=Source+Code+Pro:300, 700');
 
 html, body {
@@ -11,6 +11,9 @@ body {
   color: #A57700;
   font-size: 18px;
   margin: 0;
+}
+body.demo-on {
+  overflow: hidden;
 }
 a {
   color: #A87700;
@@ -102,6 +105,7 @@ p {
 
 #main {
   background-color: #FDF6E3;
+  padding-bottom: 3em;
 }
   .menu {
     text-align: center;
@@ -110,26 +114,26 @@ p {
     margin-bottom: -1px;
   }
   .menu a {
-    width: 6em;
     display: inline-block;
     text-align: center;
     font-size: 24px;
+    padding: 0 2em;
   }
 
 #footer {
-  margin-top: 50px;
   font-size: 15px;
   color: #999;
 }
 
 #demo {
-  position: absolute;
-  left:0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  position: fixed;
+  left:2em;
+  right: 2em;
+  top: 2em;
+  bottom: 2em;
   padding: 0.5em 4em;
 
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
   overflow: hidden;
   background-color: #FDF6E3;
 }

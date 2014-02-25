@@ -3,8 +3,9 @@ window.App = angular.module('App', ['ngAnimate']);
 App.controller('TransDemo', function(transitions, $scope, $timeout) {
   var pushDemo, timeout;
 
+  $scope.demoMode  = false;
   $scope.transType = 'fade';
-  $scope.data = []
+  $scope.data = [];
 
   pushDemo = function() {
     $scope.data.push({
@@ -12,9 +13,19 @@ App.controller('TransDemo', function(transitions, $scope, $timeout) {
     });
   };
 
+  $scope.showDemo = function ($event) {
+    $event.preventDefault();
+    $event.stopPropagation();
+    $scope.demoMode = true;
+  }
+  $scope.exitDemo = function () {
+    $scope.demoMode = false;
+  }
+
   $scope.selected = function(trans) {
     return $scope.transType === trans;
   };
+
   $scope.demo = function(trans) {
     $timeout.cancel(timeout);
     $scope.transType = trans
@@ -35,11 +46,6 @@ App.controller('TransDemo', function(transitions, $scope, $timeout) {
     timeoutDemo()
   };
 
-
-  $scope.reset = function() {
-    $timeout.cancel(timeout);
-    $scope.data.length = 0;
-  };
   $scope.add = function(transType) {
     if(transType) {
       $scope.transType = transType;
@@ -47,13 +53,13 @@ App.controller('TransDemo', function(transitions, $scope, $timeout) {
     pushDemo();
   };
 
-  $scope.transClass = function() {
-    if ($scope.transType) {
-      return "ng-trans ng-trans-" + $scope.transType;
-    }
-  };
   $scope.remove = function(index) {
     $scope.data.splice(index, 1);
+  };
+
+  $scope.reset = function() {
+    $timeout.cancel(timeout);
+    $scope.data.length = 0;
   };
 
 });
