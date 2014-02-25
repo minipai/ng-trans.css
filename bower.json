@@ -1,6 +1,6 @@
 {
   "name": "ng-trans-css",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "main": "ng-trans.css",
   "ignore": [
         "document",
