@@ -56,55 +56,15 @@
       </div>
     </div>
 
- <!--      <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <br>
-
-              <h2>Requirements</h2>
-
-              <p>You need AngularJS 1.2 with ngAnimate.</p>
-
-              <p>ng-trans.css works with directives that will add .ng-leave, .ng-leave-active, .ng-enter and .ng-enter-active CSS classes. This includes ngRepeat, ngInclude, ngIf, ngView.</p>
-              <br>
-              <h2>Usage</h2>
-              <ol>
-                <li>Link your webpage to ng-trans.css</li>
-                <li ng-non-bindable>Add class <b>ng-trans ng-trans-{{transType}}</b> to your the element of ng-repeat to make transition work.</li>
-                <li ng-non-bindable>In addition, you can add class <b>{{timingFunction}}</b> to set timing fcuntion. (<b>easeOutBack</b> will bounce!)</li>
-              </ol>
-              <pre>
-                <code>
-        &lt;ul class=&quot;list-group&quot;&gt;
-          &lt;li class=&quot;list-group-item ng-trans ng-trans-<b>{{transType}}</b> <b>{{timingFunction}}</b>&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
-        &lt;/ul&gt;
-                </code>
-              </pre>
-
-            </div>
-            <div class="col-md-4">
-              <br>
-              <br>
-              <div class="panel">
-                <div class="panel-body">
-                <p>ng-trans works with ngAnimate</p>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-            <br>
-
-          </div>
-        </div>
-
-
- -->
 
     <div id="demo">
+
+
       <h2>Demo</h2>
+
+
+
+
       <p>Select a trasition.</p>
 
       <div>
@@ -131,10 +91,20 @@
         </ul>
         <div class="clear"></div>
       </div>
-
-      <br>
       <div class="clear"></div>
-      <p class="text-center"><button class="btn btn-danger" ng-click="reset()">Clear List</button></p>
+      <!-- <p class="text-center"><button class="btn btn-danger" ng-click="reset()">Clear List</button></p> -->
+      <p>The code</p>
+<pre>
+<code>
+  &lt;ul&gt;
+    &lt;li class=&quot;ng-trans ng-trans-<b>{{transType}}</b> <b>{{timingFunction}}</b>&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
+  &lt;/ul&gt;
+</code>
+</pre>
+
+
+
+
 
       <div class="demo-list">
         <div class="demo-list-item"

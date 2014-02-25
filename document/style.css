@@ -26,12 +26,18 @@ b {
 
 pre {
   color: #666;
+  margin: 0@;
 }
 
 code {
   color: #843007;
   background-color: #F4EDDB;
   padding: 4px 6px;
+}
+pre {
+  background-color: #F4EDDB;
+  padding: 1em;
+  font-size: 15px;
 }
 
 th {
@@ -136,7 +142,7 @@ p {
   padding: 0.5em 4em;
 
   overflow: hidden;
-  background-color: rgba(255,255,255, 0.9);
+  background-color: #FDF6E3;
 }
 
 .demo-trans-list {
