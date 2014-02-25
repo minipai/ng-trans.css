@@ -2,16 +2,36 @@ window.App = angular.module('App', ['ngAnimate']);
 
 App.controller('TransDemo', function(transitions, $scope, $timeout) {
   var mockList, pushDemo, timeouts;
-  $scope.limit = 3;
+
   $scope.transType = 'fade';
-  $scope.timingFunction = '';
-  $scope.data = mockList = [];
+  $scope.data = []
   timeouts = [];
+
   pushDemo = function() {
-    return $scope.data.push({
+    $scope.data.push({
       type: $scope.transType,
       timing: $scope.timingFunction
     });
+  };
+
+  $scope.isCurrent = function() {
+    scope.transType === trans;
+  };
+  $scope.demo = function(trans) {
+    console.log('trans', trans)
+    $scope.demoTrans(trans);
+    var i = 1
+
+    var timeoutDemo = function(){
+      i = i + 1
+      $timeout(function(){
+        $scope.demoTrans(trans)
+          if( i < 8){
+            timeoutDemo()
+          }
+      }, 150)
+    }
+    timeoutDemo()
   };
   $scope.reset = function() {
     angular.forEach(timeouts, function(timeout) {
@@ -23,10 +43,8 @@ App.controller('TransDemo', function(transitions, $scope, $timeout) {
     $scope.transType = transType;
     return pushDemo();
   };
-  $scope.demoTiming = function(timingFunction) {
-    $scope.timingFunction = timingFunction;
-    return pushDemo();
-  };
+
+
   $scope.transClass = function() {
     if ($scope.transType) {
       return "ng-trans ng-trans-" + $scope.transType + " " + $scope.timingFunction;
@@ -35,59 +53,34 @@ App.controller('TransDemo', function(transitions, $scope, $timeout) {
   $scope.remove = function(index) {
     return $scope.data.splice(index, 1);
   };
-  $scope.demoAllTrans = function() {
-    var i;
-    i = 0;
-    $scope.reset();
-    return angular.forEach(transitions, function(trans) {
-      var t;
-      i = i + 400;
-      t = $timeout((function() {
-        return $scope.demoTrans(trans);
-      }), i);
-      return timeouts.push(t);
-    });
-  };
-  return $scope.demoAllTiming = function(timings) {
-    var i;
-    i = 0;
-    $scope.reset();
-    return angular.forEach(timings, function(timing) {
-      var t;
-      i = i + 800;
-      t = $timeout((function() {
-        return $scope.demoTiming(timing);
-      }), i);
-      return timeouts.push(t);
-    });
-  };
+
 });
 
-App.directive('demoTrans', function() {
-  return {
+// App.directive('demoTrans', function() {
+//   return {
 
-    scope: true,
-    restrict: 'A',
-    link: function(scope, element, attrs) {
-      var blur, trans;
-      trans = scope.trans = attrs.demoTrans;
-      blur = function() {
-        return element[0].blur();
-      };
-      scope.isCurrent = function() {
-        return scope.transType === trans;
-      };
-      return scope.demo = function() {
-        if (trans === 'all') {
-          scope.demoAllTrans();
-        } else {
-          scope.demoTrans(trans);
-        }
-        return blur();
-      };
-    }
-  };
-});
+//     scope: true,
+//     restrict: 'A',
+//     link: function(scope, element, attrs) {
+//       var blur, trans;
+//       trans = scope.trans = attrs.demoTrans;
+//       blur = function() {
+//         return element[0].blur();
+//       };
+//       scope.isCurrent = function() {
+//         return scope.transType === trans;
+//       };
+//       return scope.demo = function() {
+//         if (trans === 'all') {
+//           scope.demoAllTrans();
+//         } else {
+//           scope.demoTrans(trans);
+//         }
+//         return blur();
+//       };
+//     }
+//   };
+// });
 
 App.directive('demoTiming', function(easeIns, easeOuts, easeInOuts) {
   return {
