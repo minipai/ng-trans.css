@@ -12,109 +12,97 @@
 
   <body class="index" ng-controller="TransDemo">
 
+    <div id="header" class="clearfix">
+      <h1>ng - trans<small>.css</small></h1>
+      <p class="slogan">easy transitions for AngularJS</p>
+    </div>
+    <div class="menu panel">
+        <a href="ng-trans.css">Demo</a> &amp;
+        <a href="https://github.com/minipai/ng-trans.css">Github</a>
+    </div>
     <div id="main">
-      <div id="header" class="clearfix">
-        <h1>ng - trans<small>.css</small></h1>
-        <p class="slogan">easy transitions for AngularJS</p>
+      <div class="container">
+        <h2>About</h2>
+        <p><b>ng-trans.css</b> let you easily add transitions for AngularJS(1.2+) with ngAnimate.</p>
 
-      </div>
-      <div class="menu panel">
-          <a href="ng-trans.css">Demo</a> &amp;
-          <a href="https://github.com/minipai/ng-trans.css">Github</a>
-      </div>
-      <div id="main">
-        <div class="container">
-          <h2>About</h2>
-          <p><b>ng-trans.css</b> let you easily add transitions for AngularJS(1.2+) with ngAnimate.</p>
+        <p>ng-trans.css works with directives include <code>ngRepeat</code>, <code>ngInclude</code>, <code>ngIf</code>, <code>ngView</code>, <code>ngShow</code> and <code>ngHide</code>.</p>
 
-          <p>ng-trans.css works with directives include <code>ngRepeat</code>, <code>ngInclude</code>, <code>ngIf</code>, <code>ngView</code>, <code>ngShow</code> and <code>ngHide</code>.</p>
-
-          <h2>Download</h2>
-          <table>
-            <tr>
-              <th>Bower</th>
-              <td>
-                <code>bower install ng-trans-css</code>
-              </td>
-            </tr>
-            <tr>
-              <th>File</th>
-              <td>
-                <a href="ng-trans.css">ng-trans.css</a> or
-                <a href="ng-trans.min.css">ng-trans.min.css</a>
-              </td>
-            </tr>
-          </table>
-        </div>
+        <h2>Download</h2>
+        <table>
+          <tr>
+            <th>Bower</th>
+            <td>
+              <code>bower install ng-trans-css</code>
+            </td>
+          </tr>
+          <tr>
+            <th>File</th>
+            <td>
+              <a href="ng-trans.css">ng-trans.css</a> or
+              <a href="ng-trans.min.css">ng-trans.min.css</a>
+            </td>
+          </tr>
+        </table>
       </div>
-      <div id="footer" class="panel">
-        <div class="container">
-          <p>
-            Project by Art Pai - <a href="http://twitter.com/minipai">@minipai</a>
-          </p>
-        </div>
+    </div>
+    <div id="footer" class="panel">
+      <div class="container">
+        <p>
+          Project by Art Pai - <a href="http://twitter.com/minipai">@minipai</a>
+        </p>
       </div>
     </div>
 
-
     <div id="demo">
-
-
       <h2>Demo</h2>
 
+      <div class="demo-select">
+        <p>Select a trasition.</p>
 
-
-
-      <p>Select a trasition.</p>
-
-      <div>
         <ul class="demo-trans-list">
-          <li class="" ng-click="demo('fade')">fade</li>
+          <li ng-class="{active: selected('fade')}" ng-click="demo('fade')">fade</li>
         </ul>
         <ul class="demo-trans-list clear">
-          <li class="" ng-click="demo('fade-left')">fade-left</li>
-          <li class="" ng-click="demo()">fade-up</li>
-          <li class="" ng-click="demo()">fade-right</li>
-          <li class="" ng-click="demo()">fade-down</li>
+          <li ng-class="{active: selected('fade-left')}"  ng-click="demo('fade-left')">fade-left</li>
+          <li ng-class="{active: selected('fade-up')}"    ng-click="demo('fade-up')">fade-up</li>
+          <li ng-class="{active: selected('fade-right')}" ng-click="demo('fade-right')">fade-right</li>
+          <li ng-class="{active: selected('fade-down')}"  ng-click="demo('fade-down')">fade-down</li>
         </ul>
         <ul class="demo-trans-list">
-          <li class="" ng-click="demo('slide-left')">slide-left</li>
-          <li class="" ng-click="demo('slide-up')">slide-up</li>
-          <li class="" ng-click="demo()">slide-right</li>
-          <li class="" ng-click="demo()">slide-down</li>
+          <li ng-class="{active: selected('slide-left')}" ng-click="demo('slide-left')">slide-left</li>
+          <li ng-class="{active: selected('slide-up')}"   ng-click="demo('slide-up')">slide-up</li>
+          <li ng-class="{active: selected('slide-right')}" ng-click="demo('slide-right')">slide-right</li>
+          <li ng-class="{active: selected('slide-down')}" ng-click="demo('slide-down')">slide-down</li>
         </ul>
         <ul class="demo-trans-list">
-          <li class="" ng-click="demo()">scale-up</li>
-          <li class="" ng-click="demo()">scale-down</li>
-          <li class="" ng-click="demo()">flip-x</li>
-          <li class="" ng-click="demo()">flip-y</li>
+          <li ng-class="{active: selected('scale-up')}" ng-click="demo('scale-up')">scale-up</li>
+          <li ng-class="{active: selected('scale-down')}" ng-click="demo('scale-down')">scale-down</li>
+          <li ng-class="{active: selected('flip-x')}" ng-click="demo('flip-x')">flip-x</li>
+          <li ng-class="{active: selected('flip-y')}" ng-click="demo('flip-y')">flip-y</li>
         </ul>
         <div class="clear"></div>
-      </div>
-      <div class="clear"></div>
-      <!-- <p class="text-center"><button class="btn btn-danger" ng-click="reset()">Clear List</button></p> -->
-      <p>The code</p>
+        <p>The code</p>
 <pre>
 <code>
   &lt;ul&gt;
-    &lt;li class=&quot;ng-trans ng-trans-<b>{{transType}}</b> <b>{{timingFunction}}</b>&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
+    &lt;li class=&quot;ng-trans ng-trans-<b>{{transType}}</b>&quot; ng-repeat=&quot;item in data&quot;&gt;{{ item }}&lt;/li&gt;
   &lt;/ul&gt;
 </code>
 </pre>
-
-
-
-
-
+      </div>
       <div class="demo-list">
+        <p class="text-center demo-actions">
+          <b ng-click="add()">+</b>
+          <b ng-click="remove(data.length-1)">-</b>
+          <b ng-click="reset()">&times;</b>
+        </p>
         <div class="demo-list-item"
-            ng-repeat="item in data"
-            ng-class="'ng-trans ng-trans-'+item.type+' '+item.timing" >
+             ng-repeat="item in data"
+             ng-class="'ng-trans ng-trans-'+transType">
+          <p class="text-center"> <b ng-click="remove($index)">-</b></p>
         </div>
         <div class="clear"></div>
-
       </div>
-
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js" type="text/javascript"></script>
