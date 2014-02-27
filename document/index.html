@@ -96,15 +96,14 @@
       </div>
       <div class="demo-list">
         <p class="text-center demo-actions">
-          <b ng-click="add()">+</b>
-          <b ng-click="remove(0)">-</b>
-          <b ng-click="reset()">&times;</b>
+          <b ng-click="reset()">&orarr; </b>
         </p>
         <div class="demo-list-item"
              ng-repeat="item in data"
              ng-class="'ng-trans ng-trans-'+transType">
           <p class="text-center"> <b ng-click="remove($index)">-</b></p>
         </div>
+
         <div class="clear"></div>
       </div>
     </div>
