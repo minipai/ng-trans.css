@@ -1,7 +1,7 @@
 /* transition property & duration */
 .ng-trans {
-  -webkit-transition: 300ms all;
-  transition: 300ms all;
+  -webkit-transition: 240ms all;
+  transition: 240ms all;
 }
 .ng-trans.ng-hide-add,
 .ng-trans.ng-hide-remove {
