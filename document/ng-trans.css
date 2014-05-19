@@ -5,7 +5,7 @@
 }
 .ng-trans.ng-hide-add,
 .ng-trans.ng-hide-remove {
-  display: inherit !important;
+  display: initial !important;
 }
 /* transition types */
 .ng-trans-fade.ng-enter, .ng-trans-fade.ng-leave.ng-leave-active, .ng-trans-fade.ng-hide-remove, .ng-trans-fade.ng-hide-add.ng-hide-add-active {
