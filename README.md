@@ -1,7 +1,7 @@
 ng-trans.css
 ============
 
-* No longer in active development. Suugest https://github.com/nozzle/nzAnimate/ that have more feature *
+*No longer in active development. Suugest https://github.com/nozzle/nzAnimate/ that have more feature*
 
 ng-trans.css is some transitions made for AngularJS.
 
