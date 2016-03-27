@@ -1,4 +1,4 @@
-*No longer in active development. Sugest https://github.com/nozzle/nzAnimate/ that have more feature*
+*No longer in active development. Suggest https://github.com/nozzle/nzAnimate/ that have more feature*
 
 ng-trans.css
 ============
